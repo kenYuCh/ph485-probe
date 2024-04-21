@@ -266,6 +266,9 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
+# 15 "/Applications/microchip/xc8/v2.40/pic/include/c90/stdbool.h"
+typedef unsigned char bool;
+
 # 18 "/Applications/microchip/xc8/v2.40/pic/include/xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -17757,158 +17760,204 @@ typedef int ptrdiff_t;
 # 18 "my_helpers.h"
 void dump_buffer(const void *buffer, size_t size);
 
-# 27 "main.c"
-void print_buffer(uint8_t *buf, uint8_t length){
-
-(RC3PPS = 0x00);
-(RA5PPS = 0x0F);
-
-for(uint8_t i=0; i<length; i++){
-printf("%02X ", buf[i]);
-}
-printf("\r\n");
-
-_delay((unsigned long)((10)*(1000000/4000.0)));
-(RC3PPS = 0x0F);
-(RA5PPS = 0x00);
-}
-
-
+# 29 "uart.h"
 uint8_t tmp;
 
 volatile uint8_t rxbuffer[32];
 volatile uint8_t rxbuffer_index = 0;
 volatile uint32_t uart_rx_ticks = 0;
 volatile uint8_t uart_rx_package_event = 0;
-
 typedef enum {IDLE, BUSY} uart_rx_states_t;
 volatile uart_rx_states_t uart_rx_states = 0;
 
-
-void usart_init() {
-PIE3bits.RC1IE = 0;
-PIE3bits.TX1IE = 0;
+volatile uint8_t is_RA5_button_pressed = 0;
+volatile uint8_t is_printing = 0;
 
 
-BAUD1CON = 0x08;
-SP1BRGL = 0x19;
-SP1BRGH = 0x00;
 
-TX1STA = 0x24;
-RC1STA = 0x90;
+void usart_init();
+void putch(uint8_t data);
 
-PIE3bits.RC1IE = 1;
-}
+void EUSART1_Write(uint8_t txData);
+char EUSART1_Read();
 
-
-void putch(uint8_t data)
-{
-while(0 == PIR3bits.TX1IF);
-TX1REG = data;
-}
-
-void EUSART1_Write(uint8_t txData)
-{
-while(0 == PIR3bits.TX1IF);
-TX1REG = txData;
-}
+void EUSART1_Write_1(char *txbuf, uint8_t length);
+char EUSART1_Read_1(uint8_t length);
 
 
-void set_device_serial_number_to_i2c_slave_memorymap(){
-for (uint8_t i = 0; i < 5; i++) {
-char buffer[3];
-buffer[0] = "0A01820001"[i * 2];
-buffer[1] = "0A01820001"[i * 2 + 1];
-buffer[2] = '\0';
+
+void print_buffer(uint8_t *buf, uint8_t length);
 
 
-uint8_t value = (uint8_t)strtol(buffer, (0), 16);
-i2c_slave_set_register_with_lock(57u + i, value);
-}
-}
+void enable_uart_printf();
 
 
+void enable_tx_transmit();
+
+# 17 "myisr.h"
 volatile uint32_t ticks = 0;
-uint32_t get_ticks(){
-return ticks;
-}
-uint32_t get_ticks_with_lock(){
-GIE = 0;
-uint32_t result = ticks;
-GIE = 1;
-return result;
-}
+
+uint32_t get_ticks();
+uint32_t get_ticks_with_lock();
+uint32_t calculate_diff(uint32_t now, uint32_t prev_ticks);
+
+void Enable_Global_Interrupt();
+void Disable_Global_Interrupt();
+
+# 24 "led.h"
+typedef enum {
+LED_ON,
+LED_OFF,
+} LED_State;
+
+void LED_flashes_three_times();
+void LED_flashes_one_times();
+
+# 16 "set_device_i2c_sn.h"
+void set_device_serial_number_to_i2c_slave_memorymap();
+
+# 15 "/Applications/microchip/xc8/v2.40/pic/include/c90/stdbool.h"
+typedef unsigned char bool;
+
+# 19 "mybutton.h"
+typedef struct mybutton{
+uint8_t signals[2];
+uint32_t falling_ts[2];
+uint32_t rising_ts[2];
+
+uint8_t single_click_tmps[2];
+uint8_t double_click_tmps[2];
+uint8_t long_press_tmps[2];
+
+uint8_t single_clicked_flag;
+uint8_t double_clicked_flag;
+uint8_t long_press_flag;
+}MyButton;
+
+void init_button(MyButton *b);
+void update_mybutton(MyButton *b, bool signal, uint32_t now);
 
 
-uint32_t calculate_diff(uint32_t now, uint32_t prev_ticks) {
-uint32_t diff;
-if (now >= prev_ticks) {
-diff = now - prev_ticks;
-} else {
+bool is_single_click(MyButton *b);
+bool is_double_click(MyButton *b);
+bool is_long_press(MyButton *b);
 
-diff = ((4294967295UL) - prev_ticks) + now + 1;
-}
-return diff;
-}
+void reset_single_click_flag(MyButton *b);
+void reset_double_click_flag(MyButton *b);
+void reset_long_press_flag(MyButton *b);
 
+# 57
+bool is_it_time_up(uint32_t *prev_tick, uint32_t ms);
+bool is_it_time_over(uint32_t ms);
 
-void __interrupt() INTERRUPT_InterruptManager() {
+# 20 "monitor_sync.h"
+typedef enum {
+STATE_MONITORING_POWER_FOR_SYNC,
+STATE_DELAY,
+STATE_MEASURE,
+STATE_DISPATCH,
+STATE_CALIBRATE,
+STATE_OUTPUT_ADC,
+STATE_OUTPUT_VALUE,
+STATE_SAVE_TOP_CALIBRATION_POINT,
+STATE_SAVE_BOTTOM_CALIBRATION_POINT,
+STATE_SAVE_3RD_CALIBRATION_POINT
+} States;
 
+void monitoring_sync(States *state, MyButton *b1, MyButton *b2,
+uint8_t *b1_clicked_count, uint8_t *b2_clicked_count);
 
-if (PIR0bits.TMR0IF) {
-PIR0bits.TMR0IF = 0;
+void dispatch(States *state,
+MyButton *b1,
+MyButton *b2,
+uint8_t *b1_clicked_count_ptr,
+uint8_t *b2_clicked_count_ptr);
 
-ticks++;
+void delay_state(States *state) ;
 
+# 20 "measurement.h"
+typedef struct values {
+uint8_t ph_value;
+uint16_t ph_ADC_value;
+uint8_t ph_ADC_High_byte;
+uint8_t ph_ADC_Low_byte;
+uint16_t ph_ADC_value_List[10];
 
-if((uart_rx_states == BUSY)
-&&
-(ticks - uart_rx_ticks > 100))
-{
-uart_rx_states = IDLE;
-uart_rx_package_event = 1;
-}
+uint16_t ph_top_point_adc_value;
+uint8_t ph_top_point_adc_high_byte;
+uint8_t ph_top_point_adc_low_byte;
 
-}
+uint16_t ph_bottom_point_adc_value;
+uint8_t ph_bottom_point_adc_high_byte;
+uint8_t ph_bottom_point_adc_low_byte;
 
+uint16_t temp_value;
+uint16_t temp_adc_value;
+} SensorValue;
 
-if (PIR3bits.SSP1IF) {
-PIR3bits.SSP1IF = 0;
+void measurement(States *state, SensorValue *value);
+void send_measured_command();
+void get_measured_value(SensorValue *sensor_value);
 
-i2c_slave_interrupt();
-}
+# 18 "calibration.h"
+void calibrate(States *states, SensorValue *sensor);
+void save_top_calibration(States *states, SensorValue *sensor);
+void save_bottom_calibration(States *states, SensorValue *sensor);
 
+void set_top_calibrate_point();
+void set_bottom_calibrate_point();
+void measured_adc();
+void get_measured_adc_value(SensorValue *sensor_value);
 
+void save_top_adc_point(States *states, SensorValue *sensor_value);
+void save_bottom_adc_point(States *states, SensorValue *sensor_value);
 
-if (PIR3bits.RC1IF){
+uint16_t crc16_modbus(uint8_t *data, uint8_t len);
+void calculate_crc_and_fill_array(uint8_t *data, uint8_t data_len);
 
-
-
-uart_rx_ticks = get_ticks();
-uart_rx_states = BUSY;
-rxbuffer[rxbuffer_index] = RC1REG;
-rxbuffer_index++;
-rxbuffer_index = rxbuffer_index % 32;
-}
-}
-
+# 23 "main.c"
+bool is_time_ups(uint32_t prev_ticks, uint32_t now, uint16_t tms) {
+uint32_t diff = calculate_diff(now, prev_ticks);
+if(diff >= tms){
+return 1;
+}else {
+return 0;
+};
+};
 
 
 void main() {
-
 SYSTEM_Initialize();
 tmr0_init();
 usart_init();
 i2c_slave_init();
 
 
-(RC3PPS = 0x00);
-(RA5PPS = 0x0F);
+ANSELAbits.ANSA4 = 0;
+TRISAbits.TRISA4 = 1;
+ANSELAbits.ANSA5 = 0;
+TRISAbits.TRISA5 = 1;
+
+MyButton b1;
+MyButton b2;
+
+init_button(&b1);
+init_button(&b2);
+
+States state = STATE_MEASURE;
+
+uint8_t b1_clicked_count = 0;
+uint8_t b2_clicked_count = 0;
+
+SensorValue sensor_value;
+
+
+enable_uart_printf();
 printf("PH Probe with RS485\r\n");
 printf("sn: %s\r\n", "0A01820001");
 _delay((unsigned long)((10)*(1000000/4000.0)));
-(RC3PPS = 0x0F);
-(RA5PPS = 0x00);
+enable_tx_transmit();
+
 
 
 INTCONbits.GIE = 1;
@@ -17916,93 +17965,145 @@ INTCONbits.PEIE = 1;
 
 
 while (1) {
-
 uint32_t now = get_ticks_with_lock();
-static uint32_t prev_ticks1 = 0;
-if(calculate_diff(now, prev_ticks1) >= (4*1000LU)){
-prev_ticks1 = now;
-do { LATCbits.LATC2 = 0; } while(0);
-
-(RC3PPS = 0x00);
-(RA5PPS = 0x0F);
-printf("[%lu] Request\r\n", now);
-_delay((unsigned long)((10)*(1000000/4000.0)));
-(RC3PPS = 0x0F);
-(RA5PPS = 0x00);
+static uint32_t prev_ticks_btn = 0;
 
 
-char txbuf[32] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x04, 0x15, 0xC9};
-for(uint8_t i=0; i<8; i++){
-EUSART1_Write(txbuf[i]);
+
+
+if(calculate_diff(now, prev_ticks_btn) >= 20){
+prev_ticks_btn = now;
+update_mybutton(&b1, PORTAbits.RA4, get_ticks_with_lock());
+update_mybutton(&b2, PORTAbits.RA5, get_ticks_with_lock());
 };
-do { LATCbits.LATC2 = 1; } while(0);
-}
 
+switch(state) {
+static uint32_t prev_ticks = 0;
+static uint32_t prev_ticks_monitor = 0;
+static uint32_t prev_ticks_btn= 0;
+static uint32_t prev_ticks_calibrate = 0;
+now = get_ticks_with_lock();
 
+# 95
+case STATE_MEASURE:
+if(calculate_diff(now, prev_ticks) >= 5000){
+prev_ticks = now;
+measurement(&state, &sensor_value);
 
-if(uart_rx_package_event){
+if(1){
+state = STATE_OUTPUT_VALUE;
+};
+};
+_delay((unsigned long)((10)*(1000000/4000.0)));
+
+enable_uart_printf();
+monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+_delay((unsigned long)((10)*(1000000/4000.0)));
+enable_tx_transmit();
+break;
+
+case STATE_CALIBRATE:
+
+b1_clicked_count = 0;
+b2_clicked_count = 0;
+
+if(calculate_diff(now, prev_ticks_calibrate) >= 5000){
+prev_ticks_calibrate = now;
+measured_adc();
+_delay((unsigned long)((10)*(1000000/4000.0)));
+
+if(1){
+state = STATE_OUTPUT_ADC;
+};
+};
+
+monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+_delay((unsigned long)((10)*(1000000/4000.0)));
+dispatch(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+
+break;
+
+case STATE_DISPATCH:
+
+break;
+
+case STATE_SAVE_TOP_CALIBRATION_POINT:
+save_top_adc_point(&state, &sensor_value);
+state = STATE_CALIBRATE;
+break;
+
+case STATE_SAVE_BOTTOM_CALIBRATION_POINT:
+save_bottom_adc_point(&state, &sensor_value);
+state = STATE_CALIBRATE;
+break;
+
+case STATE_OUTPUT_ADC:
+
 uart_rx_package_event = 0;
-do { LATCbits.LATC2 = 0; } while(0);
-
-# 221
 rxbuffer_index = 0;
-
-
-float ph = 0;
-uint32_t payload = ((uint32_t)rxbuffer[5] << 24) |
-((uint32_t)rxbuffer[6]) << 16 |
-((uint32_t)rxbuffer[3]) << 8 |
-((uint32_t)rxbuffer[4] << 0);
-__builtin_memcpy(&ph,&payload,sizeof(float));
-uint16_t ph2 = (uint16_t)(ph * 100);
-printf("PH: %u\r\n", ph2);
-
-float temp = 0;
-uint32_t payload_temp = ((uint32_t)rxbuffer[9] << 24) |
-((uint32_t)rxbuffer[10]) << 16 |
-((uint32_t)rxbuffer[7]) << 8 |
-((uint32_t)rxbuffer[8] << 0);
-__builtin_memcpy(&temp,&payload_temp,sizeof(float));
-uint16_t temp2 = (uint16_t)(temp * 100);
-printf("TEMP: %u\r\n", temp2);
-
-
-(RC3PPS = 0x00);
-(RA5PPS = 0x0F);
-
-
+get_measured_adc_value(&sensor_value);
 _delay((unsigned long)((10)*(1000000/4000.0)));
-(RC3PPS = 0x0F);
-(RA5PPS = 0x00);
 
+enable_uart_printf();
+dump_memory_map();
+printf("[RX-BUFFER] ADC_value from pH485_probe: \r\n"
+"ph ADC_value_List: %u \r\n"
+"pH Top_Point ADC:     %u \r\n"
+"pH Bottom_Point ADC:  %u \r\n",
+sensor_value.ph_ADC_value,
+sensor_value.ph_top_point_adc_value,
+sensor_value.ph_bottom_point_adc_value
+);
 
+printf("[Calibration] --- \r\n--You have 5 seconds to press the calibration button-- \r\n");
+LED_flashes_three_times();
+enable_tx_transmit();
 
-GIE = 0;
-i2c_slave_set_register(0x00, (uint8_t)(ph2 >> 8) & 0xFF);
-i2c_slave_set_register(0x01, (uint8_t)(ph2 >> 0) & 0xFF);
-i2c_slave_set_register(0x02, (uint8_t)(temp2 >> 8) & 0xFF);
-i2c_slave_set_register(0x03, (uint8_t)(temp2 >> 0) & 0xFF);
-GIE = 1;
+state = STATE_CALIBRATE;
+break;
 
+case STATE_OUTPUT_VALUE:
+uart_rx_package_event = 0;
+rxbuffer_index = 0;
+do { LATCbits.LATC2 = 0; } while(0);
+get_measured_value(&sensor_value);
+
+Enable_Global_Interrupt();
+
+i2c_slave_set_register(0x00, (uint8_t)(sensor_value.ph_value >> 8) & 0xFF);
+i2c_slave_set_register(0x01, (uint8_t)(sensor_value.ph_value >> 0) & 0xFF);
+i2c_slave_set_register(0x02, (uint8_t)(sensor_value.temp_value >> 8) & 0xFF);
+i2c_slave_set_register(0x03, (uint8_t)(sensor_value.temp_value >> 0) & 0xFF);
+Disable_Global_Interrupt();
 do { LATCbits.LATC2 = 1; } while(0);
 
-(RC3PPS = 0x00);
-(RA5PPS = 0x0F);
-dump_memory_map();
-printf("[%lu] PH: %u (0.01*unit)\r\n", get_ticks(), ph2);
-_delay((unsigned long)((10)*(1000000/4000.0)));
-(RC3PPS = 0x0F);
-(RA5PPS = 0x00);
 
-}
+enable_uart_printf();
+dump_memory_map();
+printf("[RX-BUFFER] value from pH485_probe: \r\n"
+"pH  : %u \r\n"
+"TEMP: %u \r\n",
+sensor_value.ph_value,
+sensor_value.temp_value
+);
+printf("---------------------------- \r\n");
+
+enable_tx_transmit();
+
+state = STATE_MEASURE;
+
+break;
+default:
+break;
+};
+
 
 now = get_ticks_with_lock();
 static uint32_t prev_ticks2 = 0;
 if(calculate_diff(now, prev_ticks2) >= 2000){
 prev_ticks2 = now;
-
 set_device_serial_number_to_i2c_slave_memorymap();
-}
+};
 
 }
 }

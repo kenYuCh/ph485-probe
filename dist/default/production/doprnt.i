@@ -230,18 +230,15 @@ extern double round(double);
 #pragma warning disable 350
 
 # 358
-const static unsigned long dpowers[] = {1, 10, 100, 1000, 10000,
+const static unsigned int dpowers[] = {1, 10, 100, 1000, 10000,
 
-100000, 1000000, 10000000, 100000000,
-1000000000
-
+# 363
 };
 
 
-const static unsigned long hexpowers[] = {1, 0x10, 0x100, 0x1000,
+const static unsigned int hexpowers[] = {1, 0x10, 0x100, 0x1000,
 
-0x10000, 0x100000, 0x1000000, 0x10000000
-
+# 370
 };
 
 # 463
@@ -257,10 +254,11 @@ char c;
 
 int width;
 
+# 521
+signed char prec;
 
-int prec;
 
-# 525
+
 unsigned char flag;
 
 # 540
@@ -269,7 +267,7 @@ unsigned long vd;
 double integ;
 } tmpval;
 
-unsigned long val;
+unsigned int val;
 unsigned len;
 const char * cp;
 
@@ -315,19 +313,11 @@ width += *f++ - '0';
 # 625
 }
 
-# 659
-loop:
-
+# 661
 switch(c = *f++) {
 
 case 0:
 goto alldone;
-
-
-case 'l':
-
-flag |= 0x10;
-goto loop;
 
 # 738
 case 'X':
@@ -405,12 +395,7 @@ break;
 # 1299
 {
 
-# 1307
-if(flag & 0x10)
-val = (*(unsigned long *)__va_arg((*(unsigned long **)ap), (unsigned long)0));
-else
-
-
+# 1312
 val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
 }
 
@@ -484,7 +469,7 @@ switch((unsigned char)(flag & (0xC0)))
 case 0xC0:
 
 
-c = (val / dpowers[(unsigned int)prec]) % 10 + '0';
+c = (val / dpowers[(unsigned char)prec]) % 10 + '0';
 
 break;
 
@@ -492,7 +477,7 @@ break;
 case 0x80:
 
 {
-unsigned char idx = (val / hexpowers[(unsigned int)prec]) & 0xF;
+unsigned char idx = (val / hexpowers[(unsigned char)prec]) & 0xF;
 
 c = (flag & 0x20 ? "0123456789ABCDEF" : "0123456789abcdef")[idx];
 

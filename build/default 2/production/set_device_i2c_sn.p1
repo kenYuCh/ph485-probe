@@ -1,0 +1,141 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"73 /Applications/microchip/xc8/v2.40/pic/include/c90/stdlib.h
+[v _strtol `(l ~T0 @X0 0 ef3`*Cuc`**uc`i ]
+"14 i2c_slave.h
+[v _i2c_slave_set_register_with_lock `(v ~T0 @X0 0 ef2`uc`uc ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdlib.h: 7: typedef unsigned short wchar_t;
+[; ;stdlib.h: 15: typedef struct {
+[; ;stdlib.h: 16: int rem;
+[; ;stdlib.h: 17: int quot;
+[; ;stdlib.h: 18: } div_t;
+[; ;stdlib.h: 19: typedef struct {
+[; ;stdlib.h: 20: unsigned rem;
+[; ;stdlib.h: 21: unsigned quot;
+[; ;stdlib.h: 22: } udiv_t;
+[; ;stdlib.h: 23: typedef struct {
+[; ;stdlib.h: 24: long quot;
+[; ;stdlib.h: 25: long rem;
+[; ;stdlib.h: 26: } ldiv_t;
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: unsigned long quot;
+[; ;stdlib.h: 29: unsigned long rem;
+[; ;stdlib.h: 30: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 73: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 75: extern int rand(void);
+[; ;stdlib.h: 76: extern void srand(unsigned int);
+[; ;stdlib.h: 77: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 78: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 79: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 80: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 81: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 85: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 86: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 87: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 88: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 93: extern void * malloc(size_t);
+[; ;stdlib.h: 94: extern void free(void *);
+[; ;stdlib.h: 95: extern void * realloc(void *, size_t);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+[; ;stdlib.h: 104: extern int atexit(void (*)(void));
+[; ;stdlib.h: 105: extern char * getenv(const char *);
+[; ;stdlib.h: 106: extern char ** environ;
+[; ;stdlib.h: 107: extern int system(char *);
+[; ;stdlib.h: 108: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 109: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 110: extern int abs(int);
+[; ;stdlib.h: 111: extern long labs(long);
+[; ;stdlib.h: 113: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 114: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 119: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 120: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 122: extern char * ftoa(float f, int * status);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef __int24 int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 52: typedef unsigned char uint8_t;
+[; ;stdint.h: 58: typedef unsigned int uint16_t;
+[; ;stdint.h: 65: typedef __uint24 uint24_t;
+[; ;stdint.h: 72: typedef unsigned long int uint32_t;
+[; ;stdint.h: 88: typedef signed char int_least8_t;
+[; ;stdint.h: 96: typedef signed int int_least16_t;
+[; ;stdint.h: 109: typedef __int24 int_least24_t;
+[; ;stdint.h: 118: typedef signed long int int_least32_t;
+[; ;stdint.h: 136: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 143: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 154: typedef __uint24 uint_least24_t;
+[; ;stdint.h: 162: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 181: typedef signed char int_fast8_t;
+[; ;stdint.h: 188: typedef signed int int_fast16_t;
+[; ;stdint.h: 200: typedef __int24 int_fast24_t;
+[; ;stdint.h: 208: typedef signed long int int_fast32_t;
+[; ;stdint.h: 224: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 230: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 240: typedef __uint24 uint_fast24_t;
+[; ;stdint.h: 247: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 268: typedef int32_t intmax_t;
+[; ;stdint.h: 282: typedef uint32_t uintmax_t;
+[; ;stdint.h: 289: typedef int16_t intptr_t;
+[; ;stdint.h: 294: typedef uint16_t uintptr_t;
+[; ;set_device_i2c_sn.h: 16: void set_device_serial_number_to_i2c_slave_memorymap();
+[; ;i2c_slave.h: 6: void i2c_slave_init();
+[; ;i2c_slave.h: 9: void i2c_slave_set_register(uint8_t registerAddress, uint8_t value);
+[; ;i2c_slave.h: 11: void i2c_slave_interrupt();
+[; ;i2c_slave.h: 14: void i2c_slave_set_register_with_lock(uint8_t registerAddress, uint8_t value);
+[; ;i2c_slave.h: 15: uint8_t i2c_slave_get_register_with_lock(uint8_t registerAddress);
+[; ;i2c_slave.h: 18: void dump_memory_map();
+"9 set_device_i2c_sn.c
+[v _set_device_serial_number_to_i2c_slave_memorymap `(v ~T0 @X0 1 ef ]
+{
+[; ;set_device_i2c_sn.c: 9: void set_device_serial_number_to_i2c_slave_memorymap(){
+[e :U _set_device_serial_number_to_i2c_slave_memorymap ]
+[f ]
+[; ;set_device_i2c_sn.c: 10: for (uint8_t i = 0; i < 5; i++) {
+"10
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 6  ]
+[e $U 7  ]
+[e :U 6 ]
+{
+"11
+[v _buffer `uc ~T0 @X0 -> 3 `i a ]
+[; ;set_device_i2c_sn.c: 11: char buffer[3];
+[; ;set_device_i2c_sn.c: 12: buffer[0] = "0A01820001"[i * 2];
+"12
+[e = *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux *U + :s 1C * -> * -> _i `i -> 2 `i `x -> -> # *U :s 1C `i `x ]
+[; ;set_device_i2c_sn.c: 13: buffer[1] = "0A01820001"[i * 2 + 1];
+"13
+[e = *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux *U + :s 2C * -> + * -> _i `i -> 2 `i -> 1 `i `x -> -> # *U :s 2C `i `x ]
+[; ;set_device_i2c_sn.c: 14: buffer[2] = '\0';
+"14
+[e = *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `ui `uc ]
+"16
+[v _value `uc ~T0 @X0 1 a ]
+[; ;set_device_i2c_sn.c: 16: uint8_t value = (uint8_t)strtol(buffer, (0), 16);
+[e = _value -> ( _strtol (3 , , -> &U _buffer `*Cuc -> -> 0 `i `**uc -> 16 `i `uc ]
+[; ;set_device_i2c_sn.c: 17: i2c_slave_set_register_with_lock(57u + i, value);
+"17
+[e ( _i2c_slave_set_register_with_lock (2 , -> + -> 57 `ui -> _i `ui `uc _value ]
+"18
+}
+"10
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 6  ]
+[e :U 7 ]
+"18
+}
+[; ;set_device_i2c_sn.c: 18: }
+[; ;set_device_i2c_sn.c: 19: }
+"19
+[e :UE 5 ]
+}
+[a 1C 48 65 48 49 56 50 48 48 48 49 0 ]
+[a 2C 48 65 48 49 56 50 48 48 48 49 0 ]

@@ -2,280 +2,215 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
-
+#include <stdbool.h>
 #include "mcc_generated_files/mcc.h"
 #include "configuration_bits.h"
 #include "configuration.h"
 #include "i2c_slave.h"
 #include "tmr0.h"
 #include "my_helpers.h"
+#include "uart.h"
+#include "myisr.h"
+#include "led.h"
+#include "set_device_i2c_sn.h"
+#include "mybutton.h"
+#include "monitor_sync.h"
+#include "measurement.h"
+#include "calibration.h"
 
 
-#define ENABLE_RC3_UART_TX()  (RC3PPS = 0x0F)
-#define DISABLE_RC3_UART_TX() (RC3PPS = 0x00)
-#define ENABLE_RC5_UART_TX()  (RC5PPS = 0x0F)
-#define DISABLE_RC5_UART_TX() (RC5PPS = 0x00)
 
-#define set_RA5_as_UART_TX()              (RA5PPS = 0x0F)
-#define reset_RA5_peripheral_pin_select() (RA5PPS = 0x00)
-
-#define LED_D2_ON()           IO_RC2_SetLow()
-#define LED_D2_OFF()          IO_RC2_SetHigh()
-#define LED_D2_TOGGLE()       IO_RC2_Toggle()
-
-
-void print_buffer(uint8_t *buf, uint8_t length){
-
-    DISABLE_RC3_UART_TX();
-    set_RA5_as_UART_TX();
-
-    for(uint8_t i=0; i<length; i++){
-      printf("%02X ", buf[i]);
-    }
-    printf("\r\n");
-    
-    __delay_ms(10);
-    ENABLE_RC3_UART_TX();
-    reset_RA5_peripheral_pin_select();
-}
-
-
-uint8_t tmp;
-#define RX_BUFFER_SIZE 32
-volatile uint8_t  rxbuffer[RX_BUFFER_SIZE];
-volatile uint8_t  rxbuffer_index = 0;
-volatile uint32_t uart_rx_ticks = 0;
-volatile uint8_t  uart_rx_package_event = 0;
-
-typedef enum {IDLE, BUSY} uart_rx_states_t;
-volatile uart_rx_states_t uart_rx_states = 0;
-
-
-void usart_init() {
-    PIE3bits.RC1IE = 0;
-    PIE3bits.TX1IE = 0;
-    
-    // Baud rate 9600
-    BAUD1CON = 0x08;
-    SP1BRGL = 0x19;
-    SP1BRGH = 0x00;
-    
-    TX1STA = 0x24;
-    RC1STA = 0x90;
-
-    PIE3bits.RC1IE = 1;
-}
-
-
-void putch(uint8_t data)
-{
-    while(0 == PIR3bits.TX1IF);
-    TX1REG = data;
-}
-
-void EUSART1_Write(uint8_t txData)
-{
-    while(0 == PIR3bits.TX1IF);
-    TX1REG = txData;    // Write the data byte to the USART.
-}
-
-
-void set_device_serial_number_to_i2c_slave_memorymap(){
-    for (uint8_t i = 0; i < 5; i++) {
-        char buffer[3];
-        buffer[0] = DEVICE_SERIAL[i * 2];
-        buffer[1] = DEVICE_SERIAL[i * 2 + 1];
-        buffer[2] = '\0';
-        //printf("%s\r\n", buffer);
-        
-        uint8_t value = (uint8_t)strtol(buffer, NULL, 16);
-        i2c_slave_set_register_with_lock(57u + i, value);
-    }    
-}
-
-
-volatile uint32_t ticks = 0;
-uint32_t get_ticks(){
-    return ticks;
-}
-uint32_t get_ticks_with_lock(){
-    GIE = 0;
-    uint32_t result = ticks;
-    GIE = 1;
-    return result;
-}
-
-
-uint32_t calculate_diff(uint32_t now, uint32_t prev_ticks) {
-    uint32_t diff;
-    if (now >= prev_ticks) {
-        diff = now - prev_ticks;
-    } else {
-        // Handling overflow situation
-        diff = (UINT32_MAX - prev_ticks) + now + 1;
-    }
-    return diff;
-}
-
-
-void __interrupt() INTERRUPT_InterruptManager() {
-
-    // Interrupt
-    if (PIR0bits.TMR0IF) {
-        PIR0bits.TMR0IF = 0;
-        
-        ticks++;
-        
-        
-        if((uart_rx_states == BUSY) 
-            && 
-           (ticks - uart_rx_ticks > 100))
-        {
-            uart_rx_states = IDLE; 
-            uart_rx_package_event = 1;
-        }
-        
-    }
-
-    // I2C slave interrupt
-    if (PIR3bits.SSP1IF) {
-        PIR3bits.SSP1IF = 0;
-
-        i2c_slave_interrupt();
-    }
-    
-    
-    //if (PIE3bits.RC1IE == 1 && PIR3bits.RC1IF == 1){
-    if (PIR3bits.RC1IF){
-        
-        //IO_RC2_Toggle();
-        
-        uart_rx_ticks = get_ticks();
-        uart_rx_states = BUSY; 
-        rxbuffer[rxbuffer_index] = RC1REG;
-        rxbuffer_index++;
-        rxbuffer_index = rxbuffer_index % RX_BUFFER_SIZE;
-    }     
-}
-
+bool is_time_ups(uint32_t prev_ticks, uint32_t now, uint16_t tms) {
+    uint32_t diff = calculate_diff(now, prev_ticks);
+    if(diff >= tms){
+        return true;
+    }else {
+        return false;
+    };
+};
 
 
 void main() {
-
     SYSTEM_Initialize();
     tmr0_init();
     usart_init();
     i2c_slave_init();
 
-
-    DISABLE_RC3_UART_TX();
-    set_RA5_as_UART_TX();
+    // ------------------------------------ Button 
+    ANSELAbits.ANSA4 = 0; // digital input
+    TRISAbits.TRISA4 = 1; // mode input
+    ANSELAbits.ANSA5 = 0; // digital input
+    TRISAbits.TRISA5 = 1; // mode input
+    
+    MyButton b1;
+    MyButton b2;
+    
+    init_button(&b1);
+    init_button(&b2);
+    
+    States state = STATE_MEASURE;
+//    States state = STATE_CALIBRATE;
+    uint8_t b1_clicked_count = 0;
+    uint8_t b2_clicked_count = 0;
+    // ------------------------------------
+    SensorValue sensor_value;
+    // ------------------------------------ 
+    
+    enable_uart_printf();
     printf("PH Probe with RS485\r\n");
     printf("sn: %s\r\n", DEVICE_SERIAL);
     __delay_ms(10);
-    ENABLE_RC3_UART_TX();
-    reset_RA5_peripheral_pin_select();
+    enable_tx_transmit();
     
+    // ------------------------------------ Interrupt
     
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-
-
+    
+    
     while (1) {
-
         uint32_t now = get_ticks_with_lock();
-        static uint32_t prev_ticks1 = 0;
-        if(calculate_diff(now, prev_ticks1) >= (4*1000LU)){
-            prev_ticks1 = now;
-            LED_D2_ON();
-
-            DISABLE_RC3_UART_TX();
-            set_RA5_as_UART_TX();
-            printf("[%lu] Request\r\n", now);
-            __delay_ms(10);
-            ENABLE_RC3_UART_TX();
-            reset_RA5_peripheral_pin_select();
-            
-            // request 
-            char txbuf[32] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x04, 0x15, 0xC9};
-            for(uint8_t i=0; i<8; i++){
-                EUSART1_Write(txbuf[i]);
-            };
-            LED_D2_OFF();
-        }
+        static uint32_t prev_ticks_btn = 0;
         
+//        sensor_value.ph_value = 70;
         
+//        // button polling timebase
+        if(calculate_diff(now, prev_ticks_btn) >= 20){
+            prev_ticks_btn = now;
+            update_mybutton(&b1, PORTAbits.RA4, get_ticks_with_lock());
+            update_mybutton(&b2, PORTAbits.RA5, get_ticks_with_lock());
+        };
         
-        if(uart_rx_package_event){
-            uart_rx_package_event = 0;
-            LED_D2_ON();
-
-            /*DISABLE_RC3_UART_TX();
-            set_RA5_as_UART_TX();
-            print_buffer(rxbuffer, rxbuffer_index);
-            __delay_ms(10);
-            ENABLE_RC3_UART_TX();
-            reset_RA5_peripheral_pin_select();
-            */
-
-            rxbuffer_index = 0;
-
-            // arrange bytes oders.
-            float ph = 0;
-            uint32_t payload = ((uint32_t)rxbuffer[5] << 24) | 
-                               ((uint32_t)rxbuffer[6]) << 16 | 
-                               ((uint32_t)rxbuffer[3]) << 8 | 
-                               ((uint32_t)rxbuffer[4] << 0);
-            memcpy(&ph, &payload, sizeof(float));
-            uint16_t ph2 = (uint16_t)(ph * 100);
-            printf("PH: %u\r\n", ph2);
-             
-            float temp = 0;
-            uint32_t payload_temp = ((uint32_t)rxbuffer[9] << 24) | 
-                               ((uint32_t)rxbuffer[10]) << 16 | 
-                               ((uint32_t)rxbuffer[7]) << 8 | 
-                               ((uint32_t)rxbuffer[8] << 0);
-            memcpy(&temp, &payload_temp, sizeof(float));
-            uint16_t temp2 = (uint16_t)(temp * 100);
-            printf("TEMP: %u\r\n", temp2);
-
-
-            DISABLE_RC3_UART_TX();
-            set_RA5_as_UART_TX();
-            //printf("PH: %f\r\n", ph);
-//            printf("PH: %u\r\n", ph2);
-            __delay_ms(10);
-            ENABLE_RC3_UART_TX();
-            reset_RA5_peripheral_pin_select();
+        switch(state) {
+            static uint32_t prev_ticks = 0;
+            static uint32_t prev_ticks_monitor = 0;
+            static uint32_t prev_ticks_btn= 0;
+            static uint32_t prev_ticks_calibrate = 0;
+            now = get_ticks_with_lock();
             
+//            case STATE_MONITORING_POWER_FOR_SYNC:
+//                monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+//                break;
+       
+            case STATE_MEASURE:
+                if(calculate_diff(now, prev_ticks) >= 5000){
+                    prev_ticks = now;
+                    measurement(&state, &sensor_value);
+//                  if(uart_rx_package_event){
+                    if(1){
+                        state = STATE_OUTPUT_VALUE;
+                    };
+                };
+                __delay_ms(10);
+                // This function is: if you press the button during printing, it has no effect.
+                enable_uart_printf();
+                monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+                __delay_ms(10);
+                enable_tx_transmit();
+                break;
+                
+            case STATE_CALIBRATE:
+                
+                b1_clicked_count = 0;
+                b2_clicked_count = 0;
+//                
+                if(calculate_diff(now, prev_ticks_calibrate) >= 5000){
+                    prev_ticks_calibrate = now;
+                    measured_adc();
+                    __delay_ms(10);
+//                    if(uart_rx_package_event){
+                    if(1){
+                        state =  STATE_OUTPUT_ADC;
+                    };
+                };
+                
+                monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+                __delay_ms(10);
+                dispatch(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+                
+                break;
+                
+            case STATE_DISPATCH:
+//                dispatch(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+                break;
+                
+            case STATE_SAVE_TOP_CALIBRATION_POINT:
+                save_top_adc_point(&state, &sensor_value);
+                state = STATE_CALIBRATE;
+                break;
+                
+            case STATE_SAVE_BOTTOM_CALIBRATION_POINT:
+                save_bottom_adc_point(&state, &sensor_value);
+                state = STATE_CALIBRATE;
+                break;
+           
+            case STATE_OUTPUT_ADC:
+                // ---- uart_rx_buffer
+                uart_rx_package_event = 0;
+                rxbuffer_index = 0;
+                get_measured_adc_value(&sensor_value);    
+                __delay_ms(10);
+                // ------------------------------------ Print
+                enable_uart_printf();
+                dump_memory_map();
+                printf("[RX-BUFFER] ADC_value from pH485_probe: \r\n"
+                        "ph ADC_value_List: %u \r\n"
+                        "pH Top_Point ADC:     %u \r\n"
+                        "pH Bottom_Point ADC:  %u \r\n",
+                        sensor_value.ph_ADC_value,
+                        sensor_value.ph_top_point_adc_value,
+                        sensor_value.ph_bottom_point_adc_value
+                );
+                // ------------------------------------ LED Flash
+                printf("[Calibration] --- \r\n--You have 5 seconds to press the calibration button-- \r\n");
+                LED_flashes_three_times();
+                enable_tx_transmit();
+                // ----
+                state = STATE_CALIBRATE;
+            break;
             
+            case STATE_OUTPUT_VALUE:
+                uart_rx_package_event = 0;
+                rxbuffer_index = 0;
+                LED_D2_ON();
+                get_measured_value(&sensor_value); // memory big
+                // ------------------------------------
+                Enable_Global_Interrupt();
+       
+                i2c_slave_set_register(0x00, (uint8_t)(sensor_value.ph_value >> 8) & 0xFF);
+                i2c_slave_set_register(0x01, (uint8_t)(sensor_value.ph_value >> 0) & 0xFF);
+                i2c_slave_set_register(0x02, (uint8_t)(sensor_value.temp_value >> 8) & 0xFF);
+                i2c_slave_set_register(0x03, (uint8_t)(sensor_value.temp_value >> 0) & 0xFF);
+                Disable_Global_Interrupt();
+                LED_D2_OFF();
 
-            GIE = 0;
-            i2c_slave_set_register(0x00, (uint8_t)(ph2 >> 8) & 0xFF);
-            i2c_slave_set_register(0x01, (uint8_t)(ph2 >> 0) & 0xFF);
-            i2c_slave_set_register(0x02, (uint8_t)(temp2 >> 8) & 0xFF);
-            i2c_slave_set_register(0x03, (uint8_t)(temp2 >> 0) & 0xFF);
-            GIE = 1;
+                // ------------------------------------
+                enable_uart_printf();
+                dump_memory_map();
+                printf("[RX-BUFFER] value from pH485_probe: \r\n"
+                        "pH  : %u \r\n"
+                        "TEMP: %u \r\n", 
+                        sensor_value.ph_value,
+                        sensor_value.temp_value
+                        );
+                printf("---------------------------- \r\n");
+               
+                enable_tx_transmit();
+                
+                state = STATE_MEASURE;
+//                
+                break;
+            default:
+                break;
+        };
 
-            LED_D2_OFF();
-
-            DISABLE_RC3_UART_TX();
-            set_RA5_as_UART_TX();
-            dump_memory_map();
-            printf("[%lu] PH: %u (0.01*unit)\r\n", get_ticks(), ph2);
-            __delay_ms(10);
-            ENABLE_RC3_UART_TX();
-            reset_RA5_peripheral_pin_select();
-
-        }
         
         now = get_ticks_with_lock();
         static uint32_t prev_ticks2 = 0;
         if(calculate_diff(now, prev_ticks2) >= 2000){
             prev_ticks2 = now;
-            
             set_device_serial_number_to_i2c_slave_memorymap();
-        }
+        };
         
     }
 }
@@ -296,5 +231,12 @@ void main() {
  *        when switching between RC3/RA5 pin.
  *      - modify LED behavior. 
  * 
- * 
+ * 2024-04-15
+ *      - organize code
+ *      - add temp value
+ *      - add calibration
+ *      - add LED blink from calibration
+ *      - add state machine
+ *      
+ *      
  */

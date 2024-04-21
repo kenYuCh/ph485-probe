@@ -1,0 +1,1246 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18425 ]
+[d frameptr 6 ]
+"36 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.h
+[e E10474 . `uc
+IDLE 0
+BUSY 1
+]
+"66 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/main.c
+[e E10543 . `uc
+STATE_MONITORING_POWER_FOR_SYNC 0
+STATE_DELAY 1
+STATE_MEASURE 2
+STATE_DISPATCH 3
+STATE_CALIBRATE 4
+STATE_OUTPUT_ADC 5
+STATE_OUTPUT_VALUE 6
+STATE_SAVE_TOP_CALIBRATION_POINT 7
+STATE_SAVE_BOTTOM_CALIBRATION_POINT 8
+STATE_SAVE_3RD_CALIBRATION_POINT 9
+]
+"36 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.h
+[e E10469 . `uc
+IDLE 0
+BUSY 1
+]
+"15 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/monitor_sync.c
+[e E10399 . `uc
+STATE_MONITORING_POWER_FOR_SYNC 0
+STATE_DELAY 1
+STATE_MEASURE 2
+STATE_DISPATCH 3
+STATE_CALIBRATE 4
+STATE_OUTPUT_ADC 5
+STATE_OUTPUT_VALUE 6
+STATE_SAVE_TOP_CALIBRATION_POINT 7
+STATE_SAVE_BOTTOM_CALIBRATION_POINT 8
+STATE_SAVE_3RD_CALIBRATION_POINT 9
+]
+"36 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.h
+[e E10456 . `uc
+IDLE 0
+BUSY 1
+]
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/measurement.c
+[e E10355 . `uc
+STATE_MONITORING_POWER_FOR_SYNC 0
+STATE_DELAY 1
+STATE_MEASURE 2
+STATE_DISPATCH 3
+STATE_CALIBRATE 4
+STATE_OUTPUT_ADC 5
+STATE_OUTPUT_VALUE 6
+STATE_SAVE_TOP_CALIBRATION_POINT 7
+STATE_SAVE_BOTTOM_CALIBRATION_POINT 8
+STATE_SAVE_3RD_CALIBRATION_POINT 9
+]
+"36 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.h
+[e E10458 . `uc
+IDLE 0
+BUSY 1
+]
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[e E186 . `uc
+STATE_MONITORING_POWER_FOR_SYNC 0
+STATE_DELAY 1
+STATE_MEASURE 2
+STATE_DISPATCH 3
+STATE_CALIBRATE 4
+STATE_OUTPUT_ADC 5
+STATE_OUTPUT_VALUE 6
+STATE_SAVE_TOP_CALIBRATION_POINT 7
+STATE_SAVE_BOTTOM_CALIBRATION_POINT 8
+STATE_SAVE_3RD_CALIBRATION_POINT 9
+]
+"477 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"43 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isprint.c
+[v _isprint isprint `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+"15 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.40/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"27 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[v _crc16_modbus crc16_modbus `(ui  1 e 2 0 ]
+"45
+[v _calculate_crc_and_fill_array calculate_crc_and_fill_array `(v  1 e 1 0 ]
+"63
+[v _measured_adc measured_adc `(v  1 e 1 0 ]
+"79
+[v _get_measured_adc_value get_measured_adc_value `(v  1 e 1 0 ]
+"94
+[v _save_top_adc_point save_top_adc_point `(v  1 e 1 0 ]
+"117
+[v _save_bottom_adc_point save_bottom_adc_point `(v  1 e 1 0 ]
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _i2c_slave_init i2c_slave_init `(v  1 e 1 0 ]
+"32
+[v _i2c_slave_set_register i2c_slave_set_register `(v  1 e 1 0 ]
+"36
+[v _i2c_slave_get_register i2c_slave_get_register `(uc  1 e 1 0 ]
+"41
+[v _i2c_slave_set_register_with_lock i2c_slave_set_register_with_lock `(v  1 e 1 0 ]
+"65
+[v _i2c_slave_interrupt i2c_slave_interrupt `(v  1 e 1 0 ]
+"121
+[v _dump_memory_map dump_memory_map `(v  1 e 1 0 ]
+"9 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/led.c
+[v _LED_flashes_three_times LED_flashes_three_times `(v  1 e 1 0 ]
+"33 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/main.c
+[v _main main `(v  1 e 1 0 ]
+"50 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"57
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"71
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/measurement.c
+[v _measurement measurement `(v  1 e 1 0 ]
+"28
+[v _send_measured_command send_measured_command `(v  1 e 1 0 ]
+"33
+[v _get_measured_value get_measured_value `(v  1 e 1 0 ]
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/monitor_sync.c
+[v _monitoring_sync monitoring_sync `(v  1 e 1 0 ]
+"57
+[v _dispatch dispatch `(v  1 e 1 0 ]
+"7 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/my_helpers.c
+[v _dump_buffer dump_buffer `(v  1 e 1 0 ]
+"12 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mybutton.c
+[v _init_button init_button `(v  1 e 1 0 ]
+"37
+[v ___is_single_click __is_single_click `(uc  1 e 1 0 ]
+"59
+[v ___is_double_click __is_double_click `(uc  1 e 1 0 ]
+"80
+[v ___is_long_press __is_long_press `(uc  1 e 1 0 ]
+"100
+[v _update_mybutton update_mybutton `(v  1 e 1 0 ]
+"129
+[v _is_single_click is_single_click `(uc  1 e 1 0 ]
+"137
+[v _is_long_press is_long_press `(uc  1 e 1 0 ]
+"141
+[v _reset_single_click_flag reset_single_click_flag `(v  1 e 1 0 ]
+"149
+[v _reset_long_press_flag reset_long_press_flag `(v  1 e 1 0 ]
+"8 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.c
+[v _get_ticks get_ticks `(ul  1 e 4 0 ]
+"12
+[v _get_ticks_with_lock get_ticks_with_lock `(ul  1 e 4 0 ]
+"19
+[v _calculate_diff calculate_diff `(ul  1 e 4 0 ]
+"31
+[v _Enable_Global_Interrupt Enable_Global_Interrupt `(v  1 e 1 0 ]
+"34
+[v _Disable_Global_Interrupt Disable_Global_Interrupt `(v  1 e 1 0 ]
+"9 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/set_device_i2c_sn.c
+[v _set_device_serial_number_to_i2c_slave_memorymap set_device_serial_number_to_i2c_slave_memorymap `(v  1 e 1 0 ]
+"5 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/tmr0.c
+[v _tmr0_init tmr0_init `(v  1 e 1 0 ]
+"13 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.c
+[v _usart_init usart_init `(v  1 e 1 0 ]
+"29
+[v _putch putch `(v  1 e 1 0 ]
+"35
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"42
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+"48
+[v _EUSART1_Write_1 EUSART1_Write_1 `(v  1 e 1 0 ]
+"63
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"119
+[v _enable_uart_printf enable_uart_printf `(v  1 e 1 0 ]
+"123
+[v _enable_tx_transmit enable_tx_transmit `(v  1 e 1 0 ]
+[s S113 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"427 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
+[u S118 . 1 `S113 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES118  1 e 1 @11 ]
+[s S210 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"462
+[u S217 . 1 `S210 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES217  1 e 1 @12 ]
+"547
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+[s S143 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"562
+[u S150 . 1 `S143 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES150  1 e 1 @18 ]
+"597
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"647
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"697
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+[s S272 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"712
+[u S279 . 1 `S272 1 . 1 0 ]
+[v _LATCbits LATCbits `VES279  1 e 1 @26 ]
+"4860
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"4914
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"4975
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"5045
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"5099
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+"5279
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+"5459
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"5705
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
+"5725
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
+"5845
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
+"5915
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
+[s S455 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"6024
+[s S464 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S469 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S474 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S479 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S484 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S490 . 1 `uc 1 BF1 1 0 :1:0 
+`uc 1 UA1 1 0 :1:1 
+`uc 1 R 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 D 1 0 :1:5 
+`uc 1 CKE1 1 0 :1:6 
+`uc 1 SMP1 1 0 :1:7 
+]
+[s S499 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START1 1 0 :1:3 
+`uc 1 STOP1 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S505 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW1 1 0 :1:2 
+`uc 1 I2C_START1 1 0 :1:3 
+`uc 1 I2C_STOP2 1 0 :1:4 
+`uc 1 DA1 1 0 :1:5 
+]
+[s S511 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ1 1 0 :1:2 
+`uc 1 S2 1 0 :1:3 
+`uc 1 P2 1 0 :1:4 
+`uc 1 DATA_ADDRESS1 1 0 :1:5 
+]
+[s S517 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A1 1 0 :1:5 
+]
+[s S522 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_nA1 1 0 :1:5 
+]
+[s S527 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_nW1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 I2C_DAT1 1 0 :1:5 
+]
+[s S532 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA2 1 0 :1:5 
+]
+[s S537 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS1 1 0 :1:5 
+]
+[u S542 . 1 `S455 1 . 1 0 `S464 1 . 1 0 `S469 1 . 1 0 `S474 1 . 1 0 `S479 1 . 1 0 `S484 1 . 1 0 `S490 1 . 1 0 `S499 1 . 1 0 `S505 1 . 1 0 `S511 1 . 1 0 `S517 1 . 1 0 `S522 1 . 1 0 `S527 1 . 1 0 `S532 1 . 1 0 `S537 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES542  1 e 1 @399 ]
+"6279
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
+[s S724 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6309
+[s S730 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S735 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S744 . 1 `S724 1 . 1 0 `S730 1 . 1 0 `S735 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES744  1 e 1 @400 ]
+"6399
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
+[s S646 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6446
+[s S655 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK 1 0 :5:1 
+]
+[s S658 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK1 1 0 :1:1 
+`uc 1 ADMSK2 1 0 :1:2 
+`uc 1 ADMSK3 1 0 :1:3 
+`uc 1 ADMSK4 1 0 :1:4 
+`uc 1 ADMSK5 1 0 :1:5 
+]
+[s S665 . 1 `uc 1 SEN1 1 0 :1:0 
+`uc 1 ADMSK11 1 0 :1:1 
+`uc 1 ADMSK21 1 0 :1:2 
+`uc 1 ADMSK31 1 0 :1:3 
+`uc 1 ACKEN1 1 0 :1:4 
+`uc 1 ACKDT1 1 0 :1:5 
+`uc 1 ACKSTAT1 1 0 :1:6 
+`uc 1 GCEN1 1 0 :1:7 
+]
+[s S674 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RSEN1 1 0 :1:1 
+`uc 1 PEN1 1 0 :1:2 
+`uc 1 RCEN1 1 0 :1:3 
+`uc 1 ADMSK41 1 0 :1:4 
+`uc 1 ADMSK51 1 0 :1:5 
+]
+[u S681 . 1 `S646 1 . 1 0 `S655 1 . 1 0 `S658 1 . 1 0 `S665 1 . 1 0 `S674 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES681  1 e 1 @401 ]
+"16519
+[v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
+"16657
+[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
+"16911
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
+"17009
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
+[s S833 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"18802
+[u S838 . 1 `S833 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES838  1 e 1 @1804 ]
+[s S420 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+"18909
+[u S427 . 1 `S420 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES427  1 e 1 @1807 ]
+[s S846 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"19173
+[u S851 . 1 `S846 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES851  1 e 1 @1814 ]
+[s S437 . 1 `uc 1 SSP1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 SSP2IE 1 0 :1:2 
+`uc 1 BCL2IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+]
+"19280
+[u S444 . 1 `S437 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES444  1 e 1 @1817 ]
+"19540
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"19585
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"19641
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"19662
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"19707
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"19758
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"19785
+[v _PMD6 PMD6 `VEuc  1 e 1 @1948 ]
+"19818
+[v _PMD7 PMD7 `VEuc  1 e 1 @1949 ]
+"20891
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"21031
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"21128
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"21179
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"21237
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"28299
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @7877 ]
+"28351
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @7878 ]
+"28611
+[v _RX1DTPPS RX1DTPPS `VEuc  1 e 1 @7883 ]
+"28947
+[v _RA5PPS RA5PPS `VEuc  1 e 1 @7957 ]
+"29005
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @7968 ]
+"29063
+[v _RC1PPS RC1PPS `VEuc  1 e 1 @7969 ]
+"29179
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @7971 ]
+"29295
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @7973 ]
+"29353
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+[s S126 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"29368
+[u S133 . 1 `S126 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES133  1 e 1 @7992 ]
+"29398
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"29448
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"29493
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"29538
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"29738
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"29788
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"29838
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"29888
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"29938
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"32779
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"358 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"366
+[v _hexpowers hexpowers `DC[4]ui  1 s 8 hexpowers ]
+"373
+[v _octpowers octpowers `DC[6]ui  1 s 12 octpowers ]
+"78 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[v _test_recived_data test_recived_data `[8]uc  1 e 8 0 ]
+"12 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _slaveData slaveData `VE[64]uc  1 s 64 slaveData ]
+"56
+[v _currentRegister currentRegister `uc  1 s 1 currentRegister ]
+"62
+[v _currentState currentState `uc  1 s 1 currentState ]
+"17 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.h
+[v _ticks ticks `VEul  1 e 4 0 ]
+"31 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.h
+[v _rxbuffer rxbuffer `VE[32]uc  1 e 32 0 ]
+"32
+[v _rxbuffer_index rxbuffer_index `VEuc  1 e 1 0 ]
+"33
+[v _uart_rx_ticks uart_rx_ticks `VEul  1 e 4 0 ]
+"34
+[v _uart_rx_package_event uart_rx_package_event `VEuc  1 e 1 0 ]
+"36
+[v _uart_rx_states uart_rx_states `VEE10474  1 e 1 0 ]
+"33 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"75
+[v main@now now `ul  1 a 4 2 ]
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+"60
+[v main@b2 b2 `S160  1 a 27 51 ]
+"59
+[v main@b1 b1 `S160  1 a 27 24 ]
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+"70
+[v main@sensor_value sensor_value `S186  1 a 17 7 ]
+"66
+[v main@state state `E10543  1 a 1 6 ]
+"67
+[v main@b1_clicked_count b1_clicked_count `uc  1 a 1 1 ]
+"68
+[v main@b2_clicked_count b2_clicked_count `uc  1 a 1 0 ]
+"76
+[v main@prev_ticks_btn prev_ticks_btn `ul  1 s 4 prev_ticks_btn ]
+"88
+[v main@prev_ticks prev_ticks `ul  1 s 4 prev_ticks ]
+"89
+[v main@prev_ticks_monitor prev_ticks_monitor `ul  1 s 4 prev_ticks_monitor ]
+[v main@rev_ticks_btn_399 prev_ticks_btn `ul  1 s 4 prev_ticks_btn ]
+"237
+[v main@prev_ticks2 prev_ticks2 `ul  1 s 4 prev_ticks2 ]
+"244
+} 0
+"13 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.c
+[v _usart_init usart_init `(v  1 e 1 0 ]
+{
+"26
+} 0
+"100 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mybutton.c
+[v _update_mybutton update_mybutton `(v  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v update_mybutton@b b `*.4S160  1 a 1 wreg ]
+[v update_mybutton@b b `*.4S160  1 a 1 wreg ]
+[v update_mybutton@signal signal `uc  1 p 1 17 ]
+[v update_mybutton@now now `ul  1 p 4 18 ]
+"102
+"100
+[v update_mybutton@b b `*.4S160  1 a 1 26 ]
+"127
+} 0
+"37
+[v ___is_single_click __is_single_click `(uc  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v ___is_single_click@b b `*.4S160  1 a 1 wreg ]
+"42
+[v ___is_single_click@condition4 condition4 `uc  1 a 1 15 ]
+"41
+[v ___is_single_click@condition3 condition3 `uc  1 a 1 14 ]
+"40
+[v ___is_single_click@condition2 condition2 `uc  1 a 1 13 ]
+"39
+[v ___is_single_click@condition1 condition1 `uc  1 a 1 12 ]
+"37
+[v ___is_single_click@b b `*.4S160  1 a 1 wreg ]
+[v ___is_single_click@now now `ul  1 p 4 0 ]
+"39
+"37
+[v ___is_single_click@b b `*.4S160  1 a 1 16 ]
+"56
+} 0
+"80
+[v ___is_long_press __is_long_press `(uc  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v ___is_long_press@b b `*.4S160  1 a 1 wreg ]
+"82
+[v ___is_long_press@condition2 condition2 `uc  1 a 1 13 ]
+"81
+[v ___is_long_press@condition1 condition1 `uc  1 a 1 12 ]
+"80
+[v ___is_long_press@b b `*.4S160  1 a 1 wreg ]
+[v ___is_long_press@now now `ul  1 p 4 0 ]
+[v ___is_long_press@b b `*.4S160  1 a 1 14 ]
+"96
+} 0
+"59
+[v ___is_double_click __is_double_click `(uc  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v ___is_double_click@b b `*.4S160  1 a 1 wreg ]
+"63
+[v ___is_double_click@condition3 condition3 `uc  1 a 1 14 ]
+"62
+[v ___is_double_click@condition2 condition2 `uc  1 a 1 13 ]
+"61
+[v ___is_double_click@condition1 condition1 `uc  1 a 1 12 ]
+"59
+[v ___is_double_click@b b `*.4S160  1 a 1 wreg ]
+[v ___is_double_click@now now `ul  1 p 4 0 ]
+"61
+"59
+[v ___is_double_click@b b `*.4S160  1 a 1 15 ]
+"77
+} 0
+"5 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/tmr0.c
+[v _tmr0_init tmr0_init `(v  1 e 1 0 ]
+{
+"24
+} 0
+"9 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/set_device_i2c_sn.c
+[v _set_device_serial_number_to_i2c_slave_memorymap set_device_serial_number_to_i2c_slave_memorymap `(v  1 e 1 0 ]
+{
+"11
+[v set_device_serial_number_to_i2c_slave_memorymap@buffer buffer `[3]uc  1 a 3 30 ]
+"16
+[v set_device_serial_number_to_i2c_slave_memorymap@value value `uc  1 a 1 29 ]
+"10
+[v set_device_serial_number_to_i2c_slave_memorymap@i i `uc  1 a 1 33 ]
+"19
+} 0
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+{
+[v strtol@s s `*.4DCuc  1 a 1 wreg ]
+"7
+[v strtol@a a `l  1 a 4 21 ]
+"8
+[v strtol@c c `uc  1 a 1 26 ]
+[v strtol@sign sign `uc  1 a 1 20 ]
+"5
+[v strtol@s s `*.4DCuc  1 a 1 wreg ]
+[v strtol@endptr endptr `*.1*.4uc  1 p 1 12 ]
+[v strtol@base base `i  1 p 2 13 ]
+[v strtol@s s `*.4DCuc  1 a 1 25 ]
+"47
+} 0
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+{
+[v toupper@c c `uc  1 a 1 wreg ]
+[v toupper@c c `uc  1 a 1 wreg ]
+"10
+[v toupper@c c `uc  1 a 1 1 ]
+"13
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+{
+[v isspace@c c `uc  1 a 1 wreg ]
+[v isspace@c c `uc  1 a 1 wreg ]
+"14
+[v isspace@c c `uc  1 a 1 1 ]
+"15
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+{
+[v isalpha@c c `uc  1 a 1 wreg ]
+[v isalpha@c c `uc  1 a 1 wreg ]
+"14
+[v isalpha@c c `uc  1 a 1 3 ]
+"15
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+{
+[v isupper@c c `uc  1 a 1 wreg ]
+[v isupper@c c `uc  1 a 1 wreg ]
+"14
+[v isupper@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"41 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _i2c_slave_set_register_with_lock i2c_slave_set_register_with_lock `(v  1 e 1 0 ]
+{
+[v i2c_slave_set_register_with_lock@registerAddress registerAddress `uc  1 a 1 wreg ]
+[v i2c_slave_set_register_with_lock@registerAddress registerAddress `uc  1 a 1 wreg ]
+[v i2c_slave_set_register_with_lock@value value `uc  1 p 1 2 ]
+[v i2c_slave_set_register_with_lock@registerAddress registerAddress `uc  1 a 1 3 ]
+"45
+} 0
+"32
+[v _i2c_slave_set_register i2c_slave_set_register `(v  1 e 1 0 ]
+{
+[v i2c_slave_set_register@registerAddress registerAddress `uc  1 a 1 wreg ]
+[v i2c_slave_set_register@registerAddress registerAddress `uc  1 a 1 wreg ]
+[v i2c_slave_set_register@value value `uc  1 p 1 0 ]
+[v i2c_slave_set_register@registerAddress registerAddress `uc  1 a 1 1 ]
+"34
+} 0
+"94 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[v _save_top_adc_point save_top_adc_point `(v  1 e 1 0 ]
+{
+[v save_top_adc_point@states states `*.4E186  1 a 1 wreg ]
+"95
+[v save_top_adc_point@save_top_adc_command save_top_adc_command `[8]uc  1 a 8 59 ]
+"94
+[v save_top_adc_point@states states `*.4E186  1 a 1 wreg ]
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+[v save_top_adc_point@sensor_value sensor_value `*.4S186  1 p 1 50 ]
+[v save_top_adc_point@F10610 F10610 `[8]uc  1 s 8 F10610 ]
+[v save_top_adc_point@states states `*.4E186  1 a 1 67 ]
+"116
+} 0
+"117
+[v _save_bottom_adc_point save_bottom_adc_point `(v  1 e 1 0 ]
+{
+[v save_bottom_adc_point@states states `*.4E186  1 a 1 wreg ]
+"118
+[v save_bottom_adc_point@save_bottom_adc_command save_bottom_adc_command `[8]uc  1 a 8 59 ]
+"117
+[v save_bottom_adc_point@states states `*.4E186  1 a 1 wreg ]
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+[v save_bottom_adc_point@sensor_value sensor_value `*.4S186  1 p 1 50 ]
+[v save_bottom_adc_point@F10616 F10616 `[8]uc  1 s 8 F10616 ]
+[v save_bottom_adc_point@states states `*.4E186  1 a 1 67 ]
+"139
+} 0
+"45
+[v _calculate_crc_and_fill_array calculate_crc_and_fill_array `(v  1 e 1 0 ]
+{
+[v calculate_crc_and_fill_array@data data `*.4uc  1 a 1 wreg ]
+"46
+[v calculate_crc_and_fill_array@crc crc `ui  1 a 2 16 ]
+"45
+[v calculate_crc_and_fill_array@data data `*.4uc  1 a 1 wreg ]
+[v calculate_crc_and_fill_array@data_len data_len `uc  1 p 1 14 ]
+[v calculate_crc_and_fill_array@data data `*.4uc  1 a 1 18 ]
+"49
+} 0
+"27
+[v _crc16_modbus crc16_modbus `(ui  1 e 2 0 ]
+{
+[v crc16_modbus@data data `*.4uc  1 a 1 wreg ]
+"33
+[v crc16_modbus@j j `i  1 a 2 10 ]
+"31
+[v crc16_modbus@i i `i  1 a 2 8 ]
+"28
+[v crc16_modbus@crc crc `ui  1 a 2 12 ]
+"29
+[v crc16_modbus@poly poly `ui  1 a 2 5 ]
+"27
+[v crc16_modbus@data data `*.4uc  1 a 1 wreg ]
+[v crc16_modbus@len len `uc  1 p 1 0 ]
+[v crc16_modbus@data data `*.4uc  1 a 1 7 ]
+"44
+} 0
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/monitor_sync.c
+[v _monitoring_sync monitoring_sync `(v  1 e 1 0 ]
+{
+[v monitoring_sync@state state `*.39E10399  1 p 2 50 ]
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v monitoring_sync@b1 b1 `*.4S160  1 p 1 52 ]
+[v monitoring_sync@b2 b2 `*.4S160  1 p 1 53 ]
+"15
+[v monitoring_sync@b1_clicked_count b1_clicked_count `*.4uc  1 p 1 54 ]
+[v monitoring_sync@b2_clicked_count b2_clicked_count `*.4uc  1 p 1 55 ]
+"53
+} 0
+"141 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mybutton.c
+[v _reset_single_click_flag reset_single_click_flag `(v  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v reset_single_click_flag@b b `*.4S160  1 a 1 wreg ]
+[v reset_single_click_flag@b b `*.4S160  1 a 1 wreg ]
+[v reset_single_click_flag@b b `*.4S160  1 a 1 0 ]
+"143
+} 0
+"149
+[v _reset_long_press_flag reset_long_press_flag `(v  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v reset_long_press_flag@b b `*.4S160  1 a 1 wreg ]
+[v reset_long_press_flag@b b `*.4S160  1 a 1 wreg ]
+[v reset_long_press_flag@b b `*.4S160  1 a 1 0 ]
+"151
+} 0
+"129
+[v _is_single_click is_single_click `(uc  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v is_single_click@b b `*.4S160  1 a 1 wreg ]
+[v is_single_click@b b `*.4S160  1 a 1 wreg ]
+[v is_single_click@b b `*.4S160  1 a 1 0 ]
+"131
+} 0
+"137
+[v _is_long_press is_long_press `(uc  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v is_long_press@b b `*.4S160  1 a 1 wreg ]
+[v is_long_press@b b `*.4S160  1 a 1 wreg ]
+[v is_long_press@b b `*.4S160  1 a 1 0 ]
+"139
+} 0
+"9 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/led.c
+[v _LED_flashes_three_times LED_flashes_three_times `(v  1 e 1 0 ]
+{
+"10
+[v LED_flashes_three_times@i i `i  1 a 2 1 ]
+"19
+} 0
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/measurement.c
+[v _measurement measurement `(v  1 e 1 0 ]
+{
+[v measurement@state state `*.4E10355  1 a 1 wreg ]
+[v measurement@state state `*.4E10355  1 a 1 wreg ]
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+[v measurement@value value `*.4S186  1 p 1 50 ]
+"26
+} 0
+"28
+[v _send_measured_command send_measured_command `(v  1 e 1 0 ]
+{
+"29
+[v send_measured_command@txbuf txbuf `[32]uc  1 a 32 6 ]
+"28
+[v send_measured_command@F10568 F10568 `[32]uc  1 s 32 F10568 ]
+"31
+} 0
+"63 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[v _measured_adc measured_adc `(v  1 e 1 0 ]
+{
+"72
+[v measured_adc@measured_adc_command measured_adc_command `[8]uc  1 a 8 51 ]
+"69
+[v measured_adc@F10601 F10601 `[8]uc  1 s 8 F10601 ]
+"76
+} 0
+"119 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.c
+[v _enable_uart_printf enable_uart_printf `(v  1 e 1 0 ]
+{
+"122
+} 0
+"123
+[v _enable_tx_transmit enable_tx_transmit `(v  1 e 1 0 ]
+{
+"127
+} 0
+"48
+[v _EUSART1_Write_1 EUSART1_Write_1 `(v  1 e 1 0 ]
+{
+[v EUSART1_Write_1@txbuf txbuf `*.4uc  1 a 1 wreg ]
+"49
+[v EUSART1_Write_1@i i `uc  1 a 1 3 ]
+"48
+[v EUSART1_Write_1@txbuf txbuf `*.4uc  1 a 1 wreg ]
+[v EUSART1_Write_1@length length `uc  1 p 1 1 ]
+[v EUSART1_Write_1@txbuf txbuf `*.4uc  1 a 1 4 ]
+"52
+} 0
+"35
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"39
+} 0
+"12 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mybutton.c
+[v _init_button init_button `(v  1 e 1 0 ]
+{
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+[v init_button@b b `*.4S160  1 a 1 wreg ]
+[v init_button@b b `*.4S160  1 a 1 wreg ]
+"14
+"12
+[v init_button@b b `*.4S160  1 a 1 0 ]
+"32
+} 0
+"14 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _i2c_slave_init i2c_slave_init `(v  1 e 1 0 ]
+{
+"27
+[v i2c_slave_init@i i `uc  1 a 1 1 ]
+"30
+} 0
+"12 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.c
+[v _get_ticks_with_lock get_ticks_with_lock `(ul  1 e 4 0 ]
+{
+"14
+[v get_ticks_with_lock@result result `ul  1 a 4 4 ]
+"17
+} 0
+"33 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/measurement.c
+[v _get_measured_value get_measured_value `(v  1 e 1 0 ]
+{
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+[v get_measured_value@sensor_value sensor_value `*.4S186  1 a 1 wreg ]
+"53
+[v get_measured_value@temp temp `f  1 a 4 70 ]
+"54
+[v get_measured_value@payload_temp payload_temp `ul  1 a 4 66 ]
+"44
+[v get_measured_value@payload payload `ul  1 a 4 62 ]
+"33
+[v get_measured_value@sensor_value sensor_value `*.4S186  1 a 1 wreg ]
+[v get_measured_value@sensor_value sensor_value `*.4S186  1 a 1 74 ]
+"62
+} 0
+"43 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 44 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 43 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 35 ]
+"70
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1782 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1787 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1790 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1782 1 fAsBytes 4 0 `S1787 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1790  1 a 4 29 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 23 ]
+[s S1859 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1862 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1859 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1862  1 a 2 33 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 28 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 27 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 22 ]
+"8
+[v ___flmul@b b `d  1 p 4 9 ]
+[v ___flmul@a a `d  1 p 4 13 ]
+"205
+} 0
+"4 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"79 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/calibration.c
+[v _get_measured_adc_value get_measured_adc_value `(v  1 e 1 0 ]
+{
+[s S186 values 17 `uc 1 ph_value 1 0 `ui 1 ph_ADC_value 2 1 `uc 1 ph_ADC_High_byte 1 3 `uc 1 ph_ADC_Low_byte 1 4 `ui 1 ph_top_point_adc_value 2 5 `uc 1 ph_top_point_adc_high_byte 1 7 `uc 1 ph_top_point_adc_low_byte 1 8 `ui 1 ph_bottom_point_adc_value 2 9 `uc 1 ph_bottom_point_adc_high_byte 1 11 `uc 1 ph_bottom_point_adc_low_byte 1 12 `ui 1 temp_value 2 13 `ui 1 temp_adc_value 2 15 ]
+[v get_measured_adc_value@sensor_value sensor_value `*.4S186  1 a 1 wreg ]
+[v get_measured_adc_value@sensor_value sensor_value `*.4S186  1 a 1 wreg ]
+[v get_measured_adc_value@sensor_value sensor_value `*.4S186  1 a 1 0 ]
+"91
+} 0
+"121 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _dump_memory_map dump_memory_map `(v  1 e 1 0 ]
+{
+"123
+} 0
+"7 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/my_helpers.c
+[v _dump_buffer dump_buffer `(v  1 e 1 0 ]
+{
+[v dump_buffer@buffer buffer `*.5DCv  1 a 1 wreg ]
+"9
+[v dump_buffer@j j `ui  1 a 2 62 ]
+[v dump_buffer@i i `ui  1 a 2 60 ]
+"8
+[v dump_buffer@p p `*.5DCuc  1 a 1 59 ]
+"7
+[v dump_buffer@buffer buffer `*.5DCv  1 a 1 wreg ]
+[v dump_buffer@size size `ui  1 p 2 50 ]
+[v dump_buffer@buffer buffer `*.5DCv  1 a 1 58 ]
+"28
+} 0
+"477 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"1526
+[v printf@idx idx `uc  1 a 1 36 ]
+"525
+[v printf@flag flag `us  1 a 2 48 ]
+"514
+[v printf@width width `i  1 a 2 45 ]
+"545
+[v printf@val val `ui  1 a 2 42 ]
+"546
+[v printf@len len `ui  1 a 2 39 ]
+"547
+[v printf@cp cp `*.26DCuc  1 a 2 37 ]
+"512
+[v printf@c c `uc  1 a 1 47 ]
+"521
+[v printf@prec prec `c  1 a 1 44 ]
+"479
+[v printf@ap ap `[1]*.4v  1 a 1 41 ]
+"477
+[v printf@f f `*.25DCuc  1 p 2 14 ]
+"1567
+} 0
+"29 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 0 ]
+"33
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"25
+} 0
+"5 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"4 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c90/common/isprint.c
+[v _isprint isprint `(b  1 e 0 0 ]
+{
+[v isprint@c c `uc  1 a 1 wreg ]
+[v isprint@c c `uc  1 a 1 wreg ]
+"14
+[v isprint@c c `uc  1 a 1 1 ]
+"15
+} 0
+"57 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/monitor_sync.c
+[v _dispatch dispatch `(v  1 e 1 0 ]
+{
+[v dispatch@state state `*.4E10399  1 a 1 wreg ]
+"64
+[v dispatch@b2_clicked_count b2_clicked_count `uc  1 a 1 5 ]
+"63
+[v dispatch@b1_clicked_count b1_clicked_count `uc  1 a 1 4 ]
+"57
+[v dispatch@state state `*.4E10399  1 a 1 wreg ]
+[s S160 mybutton 27 `[2]uc 1 signals 2 0 `[2]ul 1 falling_ts 8 2 `[2]ul 1 rising_ts 8 10 `[2]uc 1 single_click_tmps 2 18 `[2]uc 1 double_click_tmps 2 20 `[2]uc 1 long_press_tmps 2 22 `uc 1 single_clicked_flag 1 24 `uc 1 double_clicked_flag 1 25 `uc 1 long_press_flag 1 26 ]
+"58
+[v dispatch@b1 b1 `*.4S160  1 p 1 0 ]
+"59
+[v dispatch@b2 b2 `*.4S160  1 p 1 1 ]
+"60
+[v dispatch@b1_clicked_count_ptr b1_clicked_count_ptr `*.4uc  1 p 1 2 ]
+"61
+[v dispatch@b2_clicked_count_ptr b2_clicked_count_ptr `*.4uc  1 p 1 3 ]
+"63
+[v dispatch@state state `*.4E10399  1 a 1 6 ]
+"84
+} 0
+"19 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.c
+[v _calculate_diff calculate_diff `(ul  1 e 4 0 ]
+{
+"20
+[v calculate_diff@diff diff `ul  1 a 4 16 ]
+"19
+[v calculate_diff@now now `ul  1 p 4 0 ]
+[v calculate_diff@prev_ticks prev_ticks `ul  1 p 4 4 ]
+"28
+} 0
+"50 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"71
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"55 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"108
+} 0
+"57 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"69
+} 0
+"31 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.c
+[v _Enable_Global_Interrupt Enable_Global_Interrupt `(v  1 e 1 0 ]
+{
+"33
+} 0
+"34
+[v _Disable_Global_Interrupt Disable_Global_Interrupt `(v  1 e 1 0 ]
+{
+"36
+} 0
+"63 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/uart.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"100
+} 0
+"65 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/i2c_slave.c
+[v _i2c_slave_interrupt i2c_slave_interrupt `(v  1 e 1 0 ]
+{
+"90
+[v i2c_slave_interrupt@value value `uc  1 a 1 3 ]
+"69
+[v i2c_slave_interrupt@isNack isNack `c  1 a 1 2 ]
+"68
+[v i2c_slave_interrupt@isRead isRead `uc  1 a 1 1 ]
+"118
+} 0
+"8 /Users/yuhsienchang/Desktop/Sync/own-user/2024-document/programming/WaterProbe/Unit_PCB_Probe/pH/git_ph485/ph485-probe/myisr.c
+[v _get_ticks get_ticks `(ul  1 e 4 0 ]
+{
+"10
+} 0

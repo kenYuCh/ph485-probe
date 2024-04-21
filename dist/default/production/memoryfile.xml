@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/ph-probe.X.production.hex">
+  <executable name="dist/default/production/ph485-probe.production.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
-      <used>3841</used>
-      <free>4351</free>
+      <used>6322</used>
+      <free>1870</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1024</length>
-      <used>299</used>
-      <free>725</free>
+      <used>480</used>
+      <free>544</free>
     </memory>
   </executable>
 </project>

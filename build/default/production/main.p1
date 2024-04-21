@@ -1,72 +1,55 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"29179 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
-[v _RC3PPS `Vuc ~T0 @X0 0 e@7971 ]
-"28947
-[v _RA5PPS `Vuc ~T0 @X0 0 e@7957 ]
-"195 /Applications/microchip/xc8/v2.40/pic/include/c90/stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-[v F307 `(v ~T0 @X0 1 tf1`ul ]
-"12 /Applications/microchip/xc8/v2.40/pic/include/builtins.h
-[v __delay `JF307 ~T0 @X0 0 e ]
-[p i __delay ]
-"51 main.c
-[c E10479 0 1 .. ]
-[n E10479 . IDLE BUSY  ]
-"19271 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
-[s S897 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S897 . SSP1IE BCL1IE SSP2IE BCL2IE TX1IE RC1IE ]
-"19270
-[u S896 `S897 1 ]
-[n S896 . . ]
-"19280
-[v _PIE3bits `VS896 ~T0 @X0 0 e@1817 ]
-"5459
-[v _BAUD1CON `Vuc ~T0 @X0 0 e@287 ]
-"4975
-[v _SP1BRGL `Vuc ~T0 @X0 0 e@283 ]
-"5045
-[v _SP1BRGH `Vuc ~T0 @X0 0 e@284 ]
-"5279
-[v _TX1STA `Vuc ~T0 @X0 0 e@286 ]
-"5099
-[v _RC1STA `Vuc ~T0 @X0 0 e@285 ]
-"18900
-[s S879 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S879 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF ]
-"18899
-[u S878 `S879 1 ]
-[n S878 . . ]
-"18909
-[v _PIR3bits `VS878 ~T0 @X0 0 e@1807 ]
-"4914
-[v _TX1REG `Vuc ~T0 @X0 0 e@282 ]
-"73 /Applications/microchip/xc8/v2.40/pic/include/c90/stdlib.h
-[v _strtol `(l ~T0 @X0 0 ef3`*Cuc`**uc`i ]
-"14 i2c_slave.h
-[v _i2c_slave_set_register_with_lock `(v ~T0 @X0 0 ef2`uc`uc ]
-"32779 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
-[t ~ __interrupt . k ]
-[t T10 __interrupt  ]
-"18795
-[s S873 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S873 . INTF . IOCIF TMR0IF ]
-"18794
-[u S872 `S873 1 ]
-[n S872 . . ]
-"18802
-[v _PIR0bits `VS872 ~T0 @X0 0 e@1804 ]
-"11 i2c_slave.h
-[v _i2c_slave_interrupt `(v ~T0 @X0 0 ef ]
-"4860 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
-[v _RC1REG `Vuc ~T0 @X0 0 e@281 ]
+"36 uart.h
+[c E10474 0 1 .. ]
+[n E10474 . IDLE BUSY  ]
+"21 myisr.h
+[v _calculate_diff `(ul ~T0 @X0 0 ef2`ul`ul ]
 [p mainexit ]
 "68 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "4 tmr0.h
 [v _tmr0_init `(v ~T0 @X0 0 ef ]
+"43 uart.h
+[v _usart_init `(v ~T0 @X0 0 ef ]
 "6 i2c_slave.h
 [v _i2c_slave_init `(v ~T0 @X0 0 ef ]
+"29359 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
+[s S1365 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1365 . ANSA0 ANSA1 ANSA2 . ANSA4 ANSA5 ]
+"29358
+[u S1364 `S1365 1 ]
+[n S1364 . . ]
+"29368
+[v _ANSELAbits `VS1364 ~T0 @X0 0 e@7992 ]
+"553
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"552
+[u S36 `S37 1 ]
+[n S36 . . ]
+"562
+[v _TRISAbits `VS36 ~T0 @X0 0 e@18 ]
+"19 mybutton.h
+[s S1420 `uc -> 2 `i `ul -> 2 `i `ul -> 2 `i `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i `uc 1 `uc 1 `uc 1 ]
+[n S1420 mybutton signals falling_ts rising_ts single_click_tmps double_click_tmps long_press_tmps single_clicked_flag double_clicked_flag long_press_flag ]
+"33
+[v _init_button `(v ~T0 @X0 0 ef1`*S1420 ]
+"51 main.c
+[c E10545 0 1 2 3 4 5 6 7 8 9 .. ]
+[n E10545 . STATE_MONITORING_POWER_FOR_SYNC STATE_DELAY STATE_MEASURE STATE_DISPATCH STATE_CALIBRATE STATE_OUTPUT_ADC STATE_OUTPUT_VALUE STATE_SAVE_TOP_CALIBRATION_POINT STATE_SAVE_BOTTOM_CALIBRATION_POINT STATE_SAVE_3RD_CALIBRATION_POINT  ]
+"20 measurement.h
+[s S1421 `uc 1 `ui 1 `uc 1 `uc 1 `ui -> 10 `i `ui 1 `uc 1 `uc 1 `ui 1 `uc 1 `uc 1 `ui 1 `ui 1 ]
+[n S1421 values ph_value ph_ADC_value ph_ADC_High_byte ph_ADC_Low_byte ph_ADC_value_List ph_top_point_adc_value ph_top_point_adc_high_byte ph_top_point_adc_low_byte ph_bottom_point_adc_value ph_bottom_point_adc_high_byte ph_bottom_point_adc_low_byte temp_value temp_adc_value ]
+"57 uart.h
+[v _enable_uart_printf `(v ~T0 @X0 0 ef ]
+"195 /Applications/microchip/xc8/v2.40/pic/include/c90/stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[v F308 `(v ~T0 @X0 1 tf1`ul ]
+"12 /Applications/microchip/xc8/v2.40/pic/include/builtins.h
+[v __delay `JF308 ~T0 @X0 0 e ]
+[p i __delay ]
+"60 uart.h
+[v _enable_tx_transmit `(v ~T0 @X0 0 ef ]
 "420 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
 [s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S31 . INTEDG . PEIE GIE ]
@@ -75,7 +58,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S30 . . ]
 "427
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"703
+"20 myisr.h
+[v _get_ticks_with_lock `(ul ~T0 @X0 0 ef ]
+"34 mybutton.h
+[v _update_mybutton `(v ~T0 @X0 0 ef3`*S1420`uc`ul ]
+"453 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"452
+[u S32 `S33 1 ]
+[n S32 . . ]
+"462
+[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
+"39 measurement.h
+[v _measurement `(v ~T0 @X0 0 ef2`*E10545`*S1421 ]
+"33 monitor_sync.h
+[v _monitoring_sync `(v ~T0 @X0 0 ef5`*E10545`*S1420`*S1420`*uc`*uc ]
+"24 calibration.h
+[v _measured_adc `(v ~T0 @X0 0 ef ]
+"36 monitor_sync.h
+[v _dispatch `(v ~T0 @X0 0 ef5`*E10545`*S1420`*S1420`*uc`*uc ]
+"27 calibration.h
+[v _save_top_adc_point `(v ~T0 @X0 0 ef2`*E10545`*S1421 ]
+"28
+[v _save_bottom_adc_point `(v ~T0 @X0 0 ef2`*E10545`*S1421 ]
+"25
+[v _get_measured_adc_value `(v ~T0 @X0 0 ef1`*S1421 ]
+"18 i2c_slave.h
+[v _dump_memory_map `(v ~T0 @X0 0 ef ]
+"29 led.h
+[v _LED_flashes_three_times `(v ~T0 @X0 0 ef ]
+"703 /Applications/microchip/xc8/v2.40/pic/include/proc/pic16f18425.h
 [s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S43 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 ]
 "702
@@ -83,13 +96,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S42 . . ]
 "712
 [v _LATCbits `VS42 ~T0 @X0 0 e@26 ]
-"21 /Applications/microchip/xc8/v2.40/pic/include/c90/string.h
-[v ___builtin_memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
-[p i ___builtin_memcpy ]
+"41 measurement.h
+[v _get_measured_value `(v ~T0 @X0 0 ef1`*S1421 ]
+"23 myisr.h
+[v _Enable_Global_Interrupt `(v ~T0 @X0 0 ef ]
 "9 i2c_slave.h
 [v _i2c_slave_set_register `(v ~T0 @X0 0 ef2`uc`uc ]
-"18
-[v _dump_memory_map `(v ~T0 @X0 0 ef ]
+"24 myisr.h
+[v _Disable_Global_Interrupt `(v ~T0 @X0 0 ef ]
+"16 set_device_i2c_sn.h
+[v _set_device_serial_number_to_i2c_slave_memorymap `(v ~T0 @X0 0 ef ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -226,6 +242,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 282: typedef uint32_t uintmax_t;
 [; ;stdint.h: 289: typedef int16_t intptr_t;
 [; ;stdint.h: 294: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
 [; ;builtins.h: 8: extern void __nop(void);
@@ -11721,692 +11738,629 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 4: void tmr0_init();
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;my_helpers.h: 18: void dump_buffer(const void *buffer, size_t size);
-"27 main.c
-[v _print_buffer `(v ~T0 @X0 1 ef2`*uc`uc ]
-{
-[; ;main.c: 27: void print_buffer(uint8_t *buf, uint8_t length){
-[e :U _print_buffer ]
-[v _buf `*uc ~T0 @X0 1 r1 ]
-[v _length `uc ~T0 @X0 1 r2 ]
-[f ]
-[; ;main.c: 29: (RC3PPS = 0x00);
-"29
-[e = _RC3PPS -> -> 0 `i `uc ]
-[; ;main.c: 30: (RA5PPS = 0x0F);
-"30
-[e = _RA5PPS -> -> 15 `i `uc ]
-[; ;main.c: 32: for(uint8_t i=0; i<length; i++){
-"32
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $U 1424  ]
-[e :U 1421 ]
-{
-[; ;main.c: 33: printf("%02X ", buf[i]);
-"33
-[e ( _printf , (. :s 1C -> *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux `i ]
-"34
-}
-"32
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 1424 ]
-[e $ < -> _i `i -> _length `i 1421  ]
-[e :U 1422 ]
-"34
-}
-[; ;main.c: 34: }
-[; ;main.c: 35: printf("\r\n");
-"35
-[e ( _printf :s 2C ]
-[; ;main.c: 37: _delay((unsigned long)((10)*(1000000/4000.0)));
-"37
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 38: (RC3PPS = 0x0F);
-"38
-[e = _RC3PPS -> -> 15 `i `uc ]
-[; ;main.c: 39: (RA5PPS = 0x00);
-"39
-[e = _RA5PPS -> -> 0 `i `uc ]
-[; ;main.c: 40: }
-"40
-[e :UE 1420 ]
-}
-"43
+"29 uart.h
 [v _tmp `uc ~T0 @X0 1 e ]
-[; ;main.c: 43: uint8_t tmp;
-"45
+[; ;uart.h: 29: uint8_t tmp;
+"31
 [v _rxbuffer `Vuc ~T0 @X0 -> 32 `i e ]
-[; ;main.c: 45: volatile uint8_t rxbuffer[32];
-"46
+[; ;uart.h: 31: volatile uint8_t rxbuffer[32];
+"32
 [v _rxbuffer_index `Vuc ~T0 @X0 1 e ]
 [i _rxbuffer_index
 -> -> 0 `i `uc
 ]
-[; ;main.c: 46: volatile uint8_t rxbuffer_index = 0;
-"47
+[; ;uart.h: 32: volatile uint8_t rxbuffer_index = 0;
+"33
 [v _uart_rx_ticks `Vul ~T0 @X0 1 e ]
 [i _uart_rx_ticks
 -> -> -> 0 `i `l `ul
 ]
-[; ;main.c: 47: volatile uint32_t uart_rx_ticks = 0;
-"48
+[; ;uart.h: 33: volatile uint32_t uart_rx_ticks = 0;
+"34
 [v _uart_rx_package_event `Vuc ~T0 @X0 1 e ]
 [i _uart_rx_package_event
 -> -> 0 `i `uc
 ]
-[; ;main.c: 48: volatile uint8_t uart_rx_package_event = 0;
-[; ;main.c: 50: typedef enum {IDLE, BUSY} uart_rx_states_t;
-"51
-[v _uart_rx_states `VE10479 ~T0 @X0 1 e ]
+[; ;uart.h: 34: volatile uint8_t uart_rx_package_event = 0;
+[; ;uart.h: 35: typedef enum {IDLE, BUSY} uart_rx_states_t;
+"36
+[v _uart_rx_states `VE10474 ~T0 @X0 1 e ]
 [i _uart_rx_states
--> -> 0 `i `VE10479
+-> -> 0 `i `VE10474
 ]
-[; ;main.c: 51: volatile uart_rx_states_t uart_rx_states = 0;
-"54
-[v _usart_init `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 54: void usart_init() {
-[e :U _usart_init ]
-[f ]
-[; ;main.c: 55: PIE3bits.RC1IE = 0;
-"55
-[e = . . _PIE3bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 56: PIE3bits.TX1IE = 0;
-"56
-[e = . . _PIE3bits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 59: BAUD1CON = 0x08;
-"59
-[e = _BAUD1CON -> -> 8 `i `uc ]
-[; ;main.c: 60: SP1BRGL = 0x19;
-"60
-[e = _SP1BRGL -> -> 25 `i `uc ]
-[; ;main.c: 61: SP1BRGH = 0x00;
-"61
-[e = _SP1BRGH -> -> 0 `i `uc ]
-[; ;main.c: 63: TX1STA = 0x24;
-"63
-[e = _TX1STA -> -> 36 `i `uc ]
-[; ;main.c: 64: RC1STA = 0x90;
-"64
-[e = _RC1STA -> -> 144 `i `uc ]
-[; ;main.c: 66: PIE3bits.RC1IE = 1;
-"66
-[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 67: }
-"67
-[e :UE 1425 ]
-}
-"70
-[v _putch `(v ~T0 @X0 1 ef1`uc ]
-"71
-{
-[; ;main.c: 70: void putch(uint8_t data)
-[; ;main.c: 71: {
-[e :U _putch ]
-"70
-[v _data `uc ~T0 @X0 1 r1 ]
-"71
-[f ]
-[; ;main.c: 72: while(0 == PIR3bits.TX1IF);
-"72
-[e $U 1427  ]
-[e :U 1428 ]
-[e :U 1427 ]
-[e $ == -> 0 `i -> . . _PIR3bits 0 4 `i 1428  ]
-[e :U 1429 ]
-[; ;main.c: 73: TX1REG = data;
-"73
-[e = _TX1REG _data ]
-[; ;main.c: 74: }
-"74
-[e :UE 1426 ]
-}
-"76
-[v _EUSART1_Write `(v ~T0 @X0 1 ef1`uc ]
-"77
-{
-[; ;main.c: 76: void EUSART1_Write(uint8_t txData)
-[; ;main.c: 77: {
-[e :U _EUSART1_Write ]
-"76
-[v _txData `uc ~T0 @X0 1 r1 ]
-"77
-[f ]
-[; ;main.c: 78: while(0 == PIR3bits.TX1IF);
-"78
-[e $U 1431  ]
-[e :U 1432 ]
-[e :U 1431 ]
-[e $ == -> 0 `i -> . . _PIR3bits 0 4 `i 1432  ]
-[e :U 1433 ]
-[; ;main.c: 79: TX1REG = txData;
-"79
-[e = _TX1REG _txData ]
-[; ;main.c: 80: }
-"80
-[e :UE 1430 ]
-}
-"83
-[v _set_device_serial_number_to_i2c_slave_memorymap `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 83: void set_device_serial_number_to_i2c_slave_memorymap(){
-[e :U _set_device_serial_number_to_i2c_slave_memorymap ]
-[f ]
-[; ;main.c: 84: for (uint8_t i = 0; i < 5; i++) {
-"84
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 5 `i 1435  ]
-[e $U 1436  ]
-[e :U 1435 ]
-{
-"85
-[v _buffer `uc ~T0 @X0 -> 3 `i a ]
-[; ;main.c: 85: char buffer[3];
-[; ;main.c: 86: buffer[0] = "0A01820001"[i * 2];
-"86
-[e = *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux *U + :s 3C * -> * -> _i `i -> 2 `i `x -> -> # *U :s 3C `i `x ]
-[; ;main.c: 87: buffer[1] = "0A01820001"[i * 2 + 1];
-"87
-[e = *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux *U + :s 4C * -> + * -> _i `i -> 2 `i -> 1 `i `x -> -> # *U :s 4C `i `x ]
-[; ;main.c: 88: buffer[2] = '\0';
-"88
-[e = *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `ui `uc ]
-"91
-[v _value `uc ~T0 @X0 1 a ]
-[; ;main.c: 91: uint8_t value = (uint8_t)strtol(buffer, (0), 16);
-[e = _value -> ( _strtol (3 , , -> &U _buffer `*Cuc -> -> 0 `i `**uc -> 16 `i `uc ]
-[; ;main.c: 92: i2c_slave_set_register_with_lock(57u + i, value);
-"92
-[e ( _i2c_slave_set_register_with_lock (2 , -> + -> 57 `ui -> _i `ui `uc _value ]
-"93
-}
-"84
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 5 `i 1435  ]
-[e :U 1436 ]
-"93
-}
-[; ;main.c: 93: }
-[; ;main.c: 94: }
-"94
-[e :UE 1434 ]
-}
-"97
+[; ;uart.h: 36: volatile uart_rx_states_t uart_rx_states = 0;
+"38
+[v _is_RA5_button_pressed `Vuc ~T0 @X0 1 e ]
+[i _is_RA5_button_pressed
+-> -> 0 `i `uc
+]
+[; ;uart.h: 38: volatile uint8_t is_RA5_button_pressed = 0;
+"39
+[v _is_printing `Vuc ~T0 @X0 1 e ]
+[i _is_printing
+-> -> 0 `i `uc
+]
+[; ;uart.h: 39: volatile uint8_t is_printing = 0;
+[; ;uart.h: 43: void usart_init();
+[; ;uart.h: 44: void putch(uint8_t data);
+[; ;uart.h: 46: void EUSART1_Write(uint8_t txData);
+[; ;uart.h: 47: char EUSART1_Read();
+[; ;uart.h: 49: void EUSART1_Write_1(char *txbuf, uint8_t length);
+[; ;uart.h: 50: char EUSART1_Read_1(uint8_t length);
+[; ;uart.h: 54: void print_buffer(uint8_t *buf, uint8_t length);
+[; ;uart.h: 57: void enable_uart_printf();
+[; ;uart.h: 60: void enable_tx_transmit();
+"17 myisr.h
 [v _ticks `Vul ~T0 @X0 1 e ]
 [i _ticks
 -> -> -> 0 `i `l `ul
 ]
-[; ;main.c: 97: volatile uint32_t ticks = 0;
-"98
-[v _get_ticks `(ul ~T0 @X0 1 ef ]
+[; ;myisr.h: 17: volatile uint32_t ticks = 0;
+[; ;myisr.h: 19: uint32_t get_ticks();
+[; ;myisr.h: 20: uint32_t get_ticks_with_lock();
+[; ;myisr.h: 21: uint32_t calculate_diff(uint32_t now, uint32_t prev_ticks);
+[; ;myisr.h: 23: void Enable_Global_Interrupt();
+[; ;myisr.h: 24: void Disable_Global_Interrupt();
+[; ;led.h: 24: typedef enum {
+[; ;led.h: 25: LED_ON,
+[; ;led.h: 26: LED_OFF,
+[; ;led.h: 27: } LED_State;
+[; ;led.h: 29: void LED_flashes_three_times();
+[; ;led.h: 30: void LED_flashes_one_times();
+[; ;set_device_i2c_sn.h: 16: void set_device_serial_number_to_i2c_slave_memorymap();
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;mybutton.h: 19: typedef struct mybutton{
+[; ;mybutton.h: 20: uint8_t signals[2];
+[; ;mybutton.h: 21: uint32_t falling_ts[2];
+[; ;mybutton.h: 22: uint32_t rising_ts[2];
+[; ;mybutton.h: 24: uint8_t single_click_tmps[2];
+[; ;mybutton.h: 25: uint8_t double_click_tmps[2];
+[; ;mybutton.h: 26: uint8_t long_press_tmps[2];
+[; ;mybutton.h: 28: uint8_t single_clicked_flag;
+[; ;mybutton.h: 29: uint8_t double_clicked_flag;
+[; ;mybutton.h: 30: uint8_t long_press_flag;
+[; ;mybutton.h: 31: }MyButton;
+[; ;mybutton.h: 33: void init_button(MyButton *b);
+[; ;mybutton.h: 34: void update_mybutton(MyButton *b, bool signal, uint32_t now);
+[; ;mybutton.h: 37: bool is_single_click(MyButton *b);
+[; ;mybutton.h: 38: bool is_double_click(MyButton *b);
+[; ;mybutton.h: 39: bool is_long_press(MyButton *b);
+[; ;mybutton.h: 41: void reset_single_click_flag(MyButton *b);
+[; ;mybutton.h: 42: void reset_double_click_flag(MyButton *b);
+[; ;mybutton.h: 43: void reset_long_press_flag(MyButton *b);
+[; ;mybutton.h: 57: bool is_it_time_up(uint32_t *prev_tick, uint32_t ms);
+[; ;mybutton.h: 58: bool is_it_time_over(uint32_t ms);
+[; ;monitor_sync.h: 20: typedef enum {
+[; ;monitor_sync.h: 21: STATE_MONITORING_POWER_FOR_SYNC,
+[; ;monitor_sync.h: 22: STATE_DELAY,
+[; ;monitor_sync.h: 23: STATE_MEASURE,
+[; ;monitor_sync.h: 24: STATE_DISPATCH,
+[; ;monitor_sync.h: 25: STATE_CALIBRATE,
+[; ;monitor_sync.h: 26: STATE_OUTPUT_ADC,
+[; ;monitor_sync.h: 27: STATE_OUTPUT_VALUE,
+[; ;monitor_sync.h: 28: STATE_SAVE_TOP_CALIBRATION_POINT,
+[; ;monitor_sync.h: 29: STATE_SAVE_BOTTOM_CALIBRATION_POINT,
+[; ;monitor_sync.h: 30: STATE_SAVE_3RD_CALIBRATION_POINT
+[; ;monitor_sync.h: 31: } States;
+[; ;monitor_sync.h: 33: void monitoring_sync(States *state, MyButton *b1, MyButton *b2,
+[; ;monitor_sync.h: 34: uint8_t *b1_clicked_count, uint8_t *b2_clicked_count);
+[; ;monitor_sync.h: 36: void dispatch(States *state,
+[; ;monitor_sync.h: 37: MyButton *b1,
+[; ;monitor_sync.h: 38: MyButton *b2,
+[; ;monitor_sync.h: 39: uint8_t *b1_clicked_count_ptr,
+[; ;monitor_sync.h: 40: uint8_t *b2_clicked_count_ptr);
+[; ;monitor_sync.h: 42: void delay_state(States *state) ;
+[; ;measurement.h: 20: typedef struct values {
+[; ;measurement.h: 21: uint8_t ph_value;
+[; ;measurement.h: 22: uint16_t ph_ADC_value;
+[; ;measurement.h: 23: uint8_t ph_ADC_High_byte;
+[; ;measurement.h: 24: uint8_t ph_ADC_Low_byte;
+[; ;measurement.h: 25: uint16_t ph_ADC_value_List[10];
+[; ;measurement.h: 27: uint16_t ph_top_point_adc_value;
+[; ;measurement.h: 28: uint8_t ph_top_point_adc_high_byte;
+[; ;measurement.h: 29: uint8_t ph_top_point_adc_low_byte;
+[; ;measurement.h: 31: uint16_t ph_bottom_point_adc_value;
+[; ;measurement.h: 32: uint8_t ph_bottom_point_adc_high_byte;
+[; ;measurement.h: 33: uint8_t ph_bottom_point_adc_low_byte;
+[; ;measurement.h: 35: uint16_t temp_value;
+[; ;measurement.h: 36: uint16_t temp_adc_value;
+[; ;measurement.h: 37: } SensorValue;
+[; ;measurement.h: 39: void measurement(States *state, SensorValue *value);
+[; ;measurement.h: 40: void send_measured_command();
+[; ;measurement.h: 41: void get_measured_value(SensorValue *sensor_value);
+[; ;calibration.h: 18: void calibrate(States *states, SensorValue *sensor);
+[; ;calibration.h: 19: void save_top_calibration(States *states, SensorValue *sensor);
+[; ;calibration.h: 20: void save_bottom_calibration(States *states, SensorValue *sensor);
+[; ;calibration.h: 22: void set_top_calibrate_point();
+[; ;calibration.h: 23: void set_bottom_calibrate_point();
+[; ;calibration.h: 24: void measured_adc();
+[; ;calibration.h: 25: void get_measured_adc_value(SensorValue *sensor_value);
+[; ;calibration.h: 27: void save_top_adc_point(States *states, SensorValue *sensor_value);
+[; ;calibration.h: 28: void save_bottom_adc_point(States *states, SensorValue *sensor_value);
+[; ;calibration.h: 30: uint16_t crc16_modbus(uint8_t *data, uint8_t len);
+[; ;calibration.h: 31: void calculate_crc_and_fill_array(uint8_t *data, uint8_t data_len);
+"23 main.c
+[v _is_time_ups `(uc ~T0 @X0 1 ef3`ul`ul`ui ]
 {
-[; ;main.c: 98: uint32_t get_ticks(){
-[e :U _get_ticks ]
+[; ;main.c: 23: bool is_time_ups(uint32_t prev_ticks, uint32_t now, uint16_t tms) {
+[e :U _is_time_ups ]
+[v _prev_ticks `ul ~T0 @X0 1 r1 ]
+[v _now `ul ~T0 @X0 1 r2 ]
+[v _tms `ui ~T0 @X0 1 r3 ]
 [f ]
-[; ;main.c: 99: return ticks;
-"99
-[e ) _ticks ]
-[e $UE 1438  ]
-[; ;main.c: 100: }
-"100
-[e :UE 1438 ]
-}
-"101
-[v _get_ticks_with_lock `(ul ~T0 @X0 1 ef ]
-{
-[; ;main.c: 101: uint32_t get_ticks_with_lock(){
-[e :U _get_ticks_with_lock ]
-[f ]
-[; ;main.c: 102: GIE = 0;
-"102
-[e = _GIE -> -> 0 `i `b ]
-"103
-[v _result `ul ~T0 @X0 1 a ]
-[; ;main.c: 103: uint32_t result = ticks;
-[e = _result _ticks ]
-[; ;main.c: 104: GIE = 1;
-"104
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 105: return result;
-"105
-[e ) _result ]
-[e $UE 1439  ]
-[; ;main.c: 106: }
-"106
-[e :UE 1439 ]
-}
-"109
-[v _calculate_diff `(ul ~T0 @X0 1 ef2`ul`ul ]
-{
-[; ;main.c: 109: uint32_t calculate_diff(uint32_t now, uint32_t prev_ticks) {
-[e :U _calculate_diff ]
-[v _now `ul ~T0 @X0 1 r1 ]
-[v _prev_ticks `ul ~T0 @X0 1 r2 ]
-[f ]
-"110
+"24
 [v _diff `ul ~T0 @X0 1 a ]
-[; ;main.c: 110: uint32_t diff;
-[; ;main.c: 111: if (now >= prev_ticks) {
-"111
-[e $ ! >= _now _prev_ticks 1441  ]
+[; ;main.c: 24: uint32_t diff = calculate_diff(now, prev_ticks);
+[e = _diff ( _calculate_diff (2 , _now _prev_ticks ]
+[; ;main.c: 25: if(diff >= tms){
+"25
+[e $ ! >= _diff -> _tms `ul 1423  ]
 {
-[; ;main.c: 112: diff = now - prev_ticks;
-"112
-[e = _diff - _now _prev_ticks ]
-"113
+[; ;main.c: 26: return 1;
+"26
+[e ) -> -> 1 `i `uc ]
+[e $UE 1422  ]
+"27
 }
-[; ;main.c: 113: } else {
-[e $U 1442  ]
-[e :U 1441 ]
+[; ;main.c: 27: }else {
+[e $U 1424  ]
+[e :U 1423 ]
 {
-[; ;main.c: 115: diff = ((4294967295UL) - prev_ticks) + now + 1;
-"115
-[e = _diff + + - -> 4294967295 `ul _prev_ticks _now -> -> -> 1 `i `l `ul ]
-"116
+[; ;main.c: 28: return 0;
+"28
+[e ) -> -> 0 `i `uc ]
+[e $UE 1422  ]
+"29
 }
-[e :U 1442 ]
-[; ;main.c: 116: }
-[; ;main.c: 117: return diff;
-"117
-[e ) _diff ]
-[e $UE 1440  ]
-[; ;main.c: 118: }
-"118
-[e :UE 1440 ]
-}
-[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
-"121
-[v _INTERRUPT_InterruptManager `(v ~T10 @X0 1 ef ]
-{
-[; ;main.c: 121: void __interrupt() INTERRUPT_InterruptManager() {
-[e :U _INTERRUPT_InterruptManager ]
-[f ]
-[; ;main.c: 124: if (PIR0bits.TMR0IF) {
-"124
-[e $ ! != -> . . _PIR0bits 0 3 `i -> -> -> 0 `i `Vuc `i 1444  ]
-{
-[; ;main.c: 125: PIR0bits.TMR0IF = 0;
-"125
-[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 127: ticks++;
-"127
-[e ++ _ticks -> -> -> 1 `i `l `ul ]
-[; ;main.c: 130: if((uart_rx_states == BUSY)
-[; ;main.c: 131: &&
-[; ;main.c: 132: (ticks - uart_rx_ticks > 100))
-"132
-[e $ ! && == -> _uart_rx_states `i -> . `E10479 1 `i > - _ticks _uart_rx_ticks -> -> -> 100 `i `l `ul 1445  ]
-[; ;main.c: 133: {
-"133
-{
-[; ;main.c: 134: uart_rx_states = IDLE;
-"134
-[e = _uart_rx_states . `E10479 0 ]
-[; ;main.c: 135: uart_rx_package_event = 1;
-"135
-[e = _uart_rx_package_event -> -> 1 `i `uc ]
-"136
-}
-[e :U 1445 ]
-"138
-}
-[e :U 1444 ]
-[; ;main.c: 136: }
-[; ;main.c: 138: }
-[; ;main.c: 141: if (PIR3bits.SSP1IF) {
-"141
-[e $ ! != -> . . _PIR3bits 0 0 `i -> -> -> 0 `i `Vuc `i 1446  ]
-{
-[; ;main.c: 142: PIR3bits.SSP1IF = 0;
-"142
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 144: i2c_slave_interrupt();
-"144
-[e ( _i2c_slave_interrupt ..  ]
-"145
-}
-[e :U 1446 ]
-[; ;main.c: 145: }
-[; ;main.c: 149: if (PIR3bits.RC1IF){
-"149
-[e $ ! != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i 1447  ]
-{
-[; ;main.c: 153: uart_rx_ticks = get_ticks();
-"153
-[e = _uart_rx_ticks ( _get_ticks ..  ]
-[; ;main.c: 154: uart_rx_states = BUSY;
-"154
-[e = _uart_rx_states . `E10479 1 ]
-[; ;main.c: 155: rxbuffer[rxbuffer_index] = RC1REG;
-"155
-[e = *U + &U _rxbuffer * -> _rxbuffer_index `ux -> -> # *U &U _rxbuffer `ui `ux _RC1REG ]
-[; ;main.c: 156: rxbuffer_index++;
-"156
-[e ++ _rxbuffer_index -> -> 1 `i `uc ]
-[; ;main.c: 157: rxbuffer_index = rxbuffer_index % 32;
-"157
-[e = _rxbuffer_index -> % -> _rxbuffer_index `i -> 32 `i `uc ]
-"158
-}
-[e :U 1447 ]
-[; ;main.c: 158: }
-[; ;main.c: 159: }
-"159
-[e :UE 1443 ]
+[e :U 1424 ]
+[; ;main.c: 29: };
+[; ;main.c: 30: };
+"30
+[e :UE 1422 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"163
+"33
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 163: void main() {
+[; ;main.c: 33: void main() {
 [e :U _main ]
 [f ]
-[; ;main.c: 165: SYSTEM_Initialize();
-"165
+[; ;main.c: 34: SYSTEM_Initialize();
+"34
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 166: tmr0_init();
-"166
+[; ;main.c: 35: tmr0_init();
+"35
 [e ( _tmr0_init ..  ]
-[; ;main.c: 167: usart_init();
-"167
+[; ;main.c: 36: usart_init();
+"36
 [e ( _usart_init ..  ]
-[; ;main.c: 168: i2c_slave_init();
-"168
+[; ;main.c: 37: i2c_slave_init();
+"37
 [e ( _i2c_slave_init ..  ]
-[; ;main.c: 171: (RC3PPS = 0x00);
-"171
-[e = _RC3PPS -> -> 0 `i `uc ]
-[; ;main.c: 172: (RA5PPS = 0x0F);
-"172
-[e = _RA5PPS -> -> 15 `i `uc ]
-[; ;main.c: 173: printf("PH Probe with RS485\r\n");
-"173
-[e ( _printf :s 5C ]
-[; ;main.c: 174: printf("sn: %s\r\n", "0A01820001");
-"174
-[e ( _printf , (. :s 6C :s 7C ]
-[; ;main.c: 175: _delay((unsigned long)((10)*(1000000/4000.0)));
-"175
+[; ;main.c: 40: ANSELAbits.ANSA4 = 0;
+"40
+[e = . . _ANSELAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 41: TRISAbits.TRISA4 = 1;
+"41
+[e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 42: ANSELAbits.ANSA5 = 0;
+"42
+[e = . . _ANSELAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 43: TRISAbits.TRISA5 = 1;
+"43
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+"45
+[v _b1 `S1420 ~T0 @X0 1 a ]
+"46
+[v _b2 `S1420 ~T0 @X0 1 a ]
+[; ;main.c: 45: MyButton b1;
+[; ;main.c: 46: MyButton b2;
+[; ;main.c: 48: init_button(&b1);
+"48
+[e ( _init_button (1 &U _b1 ]
+[; ;main.c: 49: init_button(&b2);
+"49
+[e ( _init_button (1 &U _b2 ]
+"51
+[v _state `E10545 ~T0 @X0 1 a ]
+[; ;main.c: 51: States state = STATE_MEASURE;
+[e = _state . `E10545 2 ]
+"53
+[v _b1_clicked_count `uc ~T0 @X0 1 a ]
+[; ;main.c: 53: uint8_t b1_clicked_count = 0;
+[e = _b1_clicked_count -> -> 0 `i `uc ]
+"54
+[v _b2_clicked_count `uc ~T0 @X0 1 a ]
+[; ;main.c: 54: uint8_t b2_clicked_count = 0;
+[e = _b2_clicked_count -> -> 0 `i `uc ]
+"56
+[v _sensor_value `S1421 ~T0 @X0 1 a ]
+[; ;main.c: 56: SensorValue sensor_value;
+[; ;main.c: 59: enable_uart_printf();
+"59
+[e ( _enable_uart_printf ..  ]
+[; ;main.c: 60: printf("PH Probe with RS485\r\n");
+"60
+[e ( _printf :s 1C ]
+[; ;main.c: 61: printf("sn: %s\r\n", "0A01820001");
+"61
+[e ( _printf , (. :s 2C :s 3C ]
+[; ;main.c: 62: _delay((unsigned long)((10)*(1000000/4000.0)));
+"62
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 176: (RC3PPS = 0x0F);
-"176
-[e = _RC3PPS -> -> 15 `i `uc ]
-[; ;main.c: 177: (RA5PPS = 0x00);
-"177
-[e = _RA5PPS -> -> 0 `i `uc ]
-[; ;main.c: 180: INTCONbits.GIE = 1;
-"180
+[; ;main.c: 63: enable_tx_transmit();
+"63
+[e ( _enable_tx_transmit ..  ]
+[; ;main.c: 67: INTCONbits.GIE = 1;
+"67
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 181: INTCONbits.PEIE = 1;
-"181
+[; ;main.c: 68: INTCONbits.PEIE = 1;
+"68
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 184: while (1) {
-"184
-[e :U 1450 ]
+[; ;main.c: 71: while (1) {
+"71
+[e :U 1427 ]
 {
-"186
+"72
 [v _now `ul ~T0 @X0 1 a ]
-[; ;main.c: 186: uint32_t now = get_ticks_with_lock();
+[; ;main.c: 72: uint32_t now = get_ticks_with_lock();
 [e = _now ( _get_ticks_with_lock ..  ]
-"187
-[v F10505 `ul ~T0 @X0 1 s prev_ticks1 ]
-[i F10505
+"73
+[v F10632 `ul ~T0 @X0 1 s prev_ticks_btn ]
+[i F10632
 -> -> -> 0 `i `l `ul
 ]
-[; ;main.c: 187: static uint32_t prev_ticks1 = 0;
-[; ;main.c: 188: if(calculate_diff(now, prev_ticks1) >= (4*1000LU)){
-"188
-[e $ ! >= ( _calculate_diff (2 , _now F10505 * -> -> -> 4 `i `l `ul -> 1000 `ul 1452  ]
+[; ;main.c: 73: static uint32_t prev_ticks_btn = 0;
+[; ;main.c: 78: if(calculate_diff(now, prev_ticks_btn) >= 20){
+"78
+[e $ ! >= ( _calculate_diff (2 , _now F10632 -> -> -> 20 `i `l `ul 1429  ]
 {
-[; ;main.c: 189: prev_ticks1 = now;
-"189
-[e = F10505 _now ]
-[; ;main.c: 190: do { LATCbits.LATC2 = 0; } while(0);
-"190
-[e :U 1455 ]
+[; ;main.c: 79: prev_ticks_btn = now;
+"79
+[e = F10632 _now ]
+[; ;main.c: 80: update_mybutton(&b1, PORTAbits.RA4, get_ticks_with_lock());
+"80
+[e ( _update_mybutton (3 , , &U _b1 . . _PORTAbits 0 4 ( _get_ticks_with_lock ..  ]
+[; ;main.c: 81: update_mybutton(&b2, PORTAbits.RA5, get_ticks_with_lock());
+"81
+[e ( _update_mybutton (3 , , &U _b2 . . _PORTAbits 0 5 ( _get_ticks_with_lock ..  ]
+"82
+}
+[e :U 1429 ]
+[; ;main.c: 82: };
+[; ;main.c: 84: switch(state) {
+"84
+[e $U 1431  ]
+{
+"85
+[v F10633 `ul ~T0 @X0 1 s prev_ticks ]
+[i F10633
+-> -> -> 0 `i `l `ul
+]
+"86
+[v F10634 `ul ~T0 @X0 1 s prev_ticks_monitor ]
+[i F10634
+-> -> -> 0 `i `l `ul
+]
+[v F10635 `ul ~T0 @X0 1 s prev_ticks_btn ]
+[i F10635
+"87
+-> -> -> 0 `i `l `ul
+]
+"88
+[v F10636 `ul ~T0 @X0 1 s prev_ticks_calibrate ]
+[i F10636
+-> -> -> 0 `i `l `ul
+]
+[; ;main.c: 85: static uint32_t prev_ticks = 0;
+[; ;main.c: 86: static uint32_t prev_ticks_monitor = 0;
+[; ;main.c: 87: static uint32_t prev_ticks_btn= 0;
+[; ;main.c: 88: static uint32_t prev_ticks_calibrate = 0;
+[; ;main.c: 89: now = get_ticks_with_lock();
+"89
+[e = _now ( _get_ticks_with_lock ..  ]
+[; ;main.c: 95: case STATE_MEASURE:
+"95
+[e :U 1432 ]
+[; ;main.c: 96: if(calculate_diff(now, prev_ticks) >= 5000){
+"96
+[e $ ! >= ( _calculate_diff (2 , _now F10633 -> -> -> 5000 `i `l `ul 1433  ]
+{
+[; ;main.c: 97: prev_ticks = now;
+"97
+[e = F10633 _now ]
+[; ;main.c: 98: measurement(&state, &sensor_value);
+"98
+[e ( _measurement (2 , &U _state &U _sensor_value ]
+[; ;main.c: 100: if(1){
+"100
+[e $ ! != -> 1 `i -> 0 `i 1434  ]
+{
+[; ;main.c: 101: state = STATE_OUTPUT_VALUE;
+"101
+[e = _state . `E10545 6 ]
+"102
+}
+[e :U 1434 ]
+[; ;main.c: 102: };
+"103
+}
+[e :U 1433 ]
+[; ;main.c: 103: };
+[; ;main.c: 104: _delay((unsigned long)((10)*(1000000/4000.0)));
+"104
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 106: enable_uart_printf();
+"106
+[e ( _enable_uart_printf ..  ]
+[; ;main.c: 107: monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+"107
+[e ( _monitoring_sync (4 , , , , &U _state &U _b1 &U _b2 &U _b1_clicked_count &U _b2_clicked_count ]
+[; ;main.c: 108: _delay((unsigned long)((10)*(1000000/4000.0)));
+"108
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 109: enable_tx_transmit();
+"109
+[e ( _enable_tx_transmit ..  ]
+[; ;main.c: 110: break;
+"110
+[e $U 1430  ]
+[; ;main.c: 112: case STATE_CALIBRATE:
+"112
+[e :U 1435 ]
+[; ;main.c: 114: b1_clicked_count = 0;
+"114
+[e = _b1_clicked_count -> -> 0 `i `uc ]
+[; ;main.c: 115: b2_clicked_count = 0;
+"115
+[e = _b2_clicked_count -> -> 0 `i `uc ]
+[; ;main.c: 117: if(calculate_diff(now, prev_ticks_calibrate) >= 5000){
+"117
+[e $ ! >= ( _calculate_diff (2 , _now F10636 -> -> -> 5000 `i `l `ul 1436  ]
+{
+[; ;main.c: 118: prev_ticks_calibrate = now;
+"118
+[e = F10636 _now ]
+[; ;main.c: 119: measured_adc();
+"119
+[e ( _measured_adc ..  ]
+[; ;main.c: 120: _delay((unsigned long)((10)*(1000000/4000.0)));
+"120
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 122: if(1){
+"122
+[e $ ! != -> 1 `i -> 0 `i 1437  ]
+{
+[; ;main.c: 123: state = STATE_OUTPUT_ADC;
+"123
+[e = _state . `E10545 5 ]
+"124
+}
+[e :U 1437 ]
+[; ;main.c: 124: };
+"125
+}
+[e :U 1436 ]
+[; ;main.c: 125: };
+[; ;main.c: 127: monitoring_sync(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+"127
+[e ( _monitoring_sync (4 , , , , &U _state &U _b1 &U _b2 &U _b1_clicked_count &U _b2_clicked_count ]
+[; ;main.c: 128: _delay((unsigned long)((10)*(1000000/4000.0)));
+"128
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 129: dispatch(&state, &b1, &b2, &b1_clicked_count, &b2_clicked_count);
+"129
+[e ( _dispatch (4 , , , , &U _state &U _b1 &U _b2 &U _b1_clicked_count &U _b2_clicked_count ]
+[; ;main.c: 131: break;
+"131
+[e $U 1430  ]
+[; ;main.c: 133: case STATE_DISPATCH:
+"133
+[e :U 1438 ]
+[; ;main.c: 135: break;
+"135
+[e $U 1430  ]
+[; ;main.c: 137: case STATE_SAVE_TOP_CALIBRATION_POINT:
+"137
+[e :U 1439 ]
+[; ;main.c: 138: save_top_adc_point(&state, &sensor_value);
+"138
+[e ( _save_top_adc_point (2 , &U _state &U _sensor_value ]
+[; ;main.c: 139: state = STATE_CALIBRATE;
+"139
+[e = _state . `E10545 4 ]
+[; ;main.c: 140: break;
+"140
+[e $U 1430  ]
+[; ;main.c: 142: case STATE_SAVE_BOTTOM_CALIBRATION_POINT:
+"142
+[e :U 1440 ]
+[; ;main.c: 143: save_bottom_adc_point(&state, &sensor_value);
+"143
+[e ( _save_bottom_adc_point (2 , &U _state &U _sensor_value ]
+[; ;main.c: 144: state = STATE_CALIBRATE;
+"144
+[e = _state . `E10545 4 ]
+[; ;main.c: 145: break;
+"145
+[e $U 1430  ]
+[; ;main.c: 147: case STATE_OUTPUT_ADC:
+"147
+[e :U 1441 ]
+[; ;main.c: 149: uart_rx_package_event = 0;
+"149
+[e = _uart_rx_package_event -> -> 0 `i `uc ]
+[; ;main.c: 150: rxbuffer_index = 0;
+"150
+[e = _rxbuffer_index -> -> 0 `i `uc ]
+[; ;main.c: 151: get_measured_adc_value(&sensor_value);
+"151
+[e ( _get_measured_adc_value (1 &U _sensor_value ]
+[; ;main.c: 152: _delay((unsigned long)((10)*(1000000/4000.0)));
+"152
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 154: enable_uart_printf();
+"154
+[e ( _enable_uart_printf ..  ]
+[; ;main.c: 155: dump_memory_map();
+"155
+[e ( _dump_memory_map ..  ]
+[; ;main.c: 156: printf("[RX-BUFFER] ADC_value from pH485_probe: \r\n"
+[; ;main.c: 157: "ph ADC_value_List: %u \r\n"
+[; ;main.c: 158: "pH Top_Point ADC:     %u \r\n"
+[; ;main.c: 159: "pH Bottom_Point ADC:  %u \r\n",
+[; ;main.c: 160: sensor_value.ph_ADC_value,
+[; ;main.c: 161: sensor_value.ph_top_point_adc_value,
+[; ;main.c: 162: sensor_value.ph_bottom_point_adc_value
+[; ;main.c: 163: );
+"163
+[e ( _printf , , , (. :s 4C . _sensor_value 1 . _sensor_value 5 . _sensor_value 8 ]
+[; ;main.c: 165: printf("[Calibration] --- \r\n--You have 5 seconds to press the calibration button-- \r\n");
+"165
+[e ( _printf :s 5C ]
+[; ;main.c: 166: LED_flashes_three_times();
+"166
+[e ( _LED_flashes_three_times ..  ]
+[; ;main.c: 167: enable_tx_transmit();
+"167
+[e ( _enable_tx_transmit ..  ]
+[; ;main.c: 169: state = STATE_CALIBRATE;
+"169
+[e = _state . `E10545 4 ]
+[; ;main.c: 170: break;
+"170
+[e $U 1430  ]
+[; ;main.c: 172: case STATE_OUTPUT_VALUE:
+"172
+[e :U 1442 ]
+[; ;main.c: 173: uart_rx_package_event = 0;
+"173
+[e = _uart_rx_package_event -> -> 0 `i `uc ]
+[; ;main.c: 174: rxbuffer_index = 0;
+"174
+[e = _rxbuffer_index -> -> 0 `i `uc ]
+[; ;main.c: 175: do { LATCbits.LATC2 = 0; } while(0);
+"175
+[e :U 1445 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 1454 ]
-[; ;main.c: 192: (RC3PPS = 0x00);
-"192
-[e = _RC3PPS -> -> 0 `i `uc ]
-[; ;main.c: 193: (RA5PPS = 0x0F);
-"193
-[e = _RA5PPS -> -> 15 `i `uc ]
-[; ;main.c: 194: printf("[%lu] Request\r\n", now);
-"194
-[e ( _printf , (. :s 8C _now ]
-[; ;main.c: 195: _delay((unsigned long)((10)*(1000000/4000.0)));
-"195
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 196: (RC3PPS = 0x0F);
-"196
-[e = _RC3PPS -> -> 15 `i `uc ]
-[; ;main.c: 197: (RA5PPS = 0x00);
-"197
-[e = _RA5PPS -> -> 0 `i `uc ]
-[v F10508 `uc ~T0 @X0 -> 32 `i s ]
-[i F10508
-:U ..
-"200
--> -> 1 `i `uc
--> -> 3 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 4 `i `uc
--> -> 21 `i `uc
--> -> 201 `i `uc
-..
-]
-[v _txbuf `uc ~T0 @X0 -> 32 `i a ]
-[; ;main.c: 200: char txbuf[32] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x04, 0x15, 0xC9};
-[e = _txbuf F10508 ]
-[; ;main.c: 201: for(uint8_t i=0; i<8; i++){
-"201
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 1456  ]
-[e $U 1457  ]
-[e :U 1456 ]
-{
-[; ;main.c: 202: EUSART1_Write(txbuf[i]);
-"202
-[e ( _EUSART1_Write (1 *U + &U _txbuf * -> _i `ux -> -> # *U &U _txbuf `ui `ux ]
-"203
-}
-"201
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 1456  ]
-[e :U 1457 ]
-"203
-}
-[; ;main.c: 203: };
-[; ;main.c: 204: do { LATCbits.LATC2 = 1; } while(0);
-"204
-[e :U 1461 ]
+[e :U 1444 ]
+[; ;main.c: 176: get_measured_value(&sensor_value);
+"176
+[e ( _get_measured_value (1 &U _sensor_value ]
+[; ;main.c: 178: Enable_Global_Interrupt();
+"178
+[e ( _Enable_Global_Interrupt ..  ]
+[; ;main.c: 180: i2c_slave_set_register(0x00, (uint8_t)(sensor_value.ph_value >> 8) & 0xFF);
+"180
+[e ( _i2c_slave_set_register (2 , -> -> 0 `i `uc -> & -> -> >> -> . _sensor_value 0 `i -> 8 `i `uc `i -> 255 `i `uc ]
+[; ;main.c: 181: i2c_slave_set_register(0x01, (uint8_t)(sensor_value.ph_value >> 0) & 0xFF);
+"181
+[e ( _i2c_slave_set_register (2 , -> -> 1 `i `uc -> & -> -> >> -> . _sensor_value 0 `i -> 0 `i `uc `i -> 255 `i `uc ]
+[; ;main.c: 182: i2c_slave_set_register(0x02, (uint8_t)(sensor_value.temp_value >> 8) & 0xFF);
+"182
+[e ( _i2c_slave_set_register (2 , -> -> 2 `i `uc -> & -> -> >> . _sensor_value 11 -> 8 `i `uc `i -> 255 `i `uc ]
+[; ;main.c: 183: i2c_slave_set_register(0x03, (uint8_t)(sensor_value.temp_value >> 0) & 0xFF);
+"183
+[e ( _i2c_slave_set_register (2 , -> -> 3 `i `uc -> & -> -> >> . _sensor_value 11 -> 0 `i `uc `i -> 255 `i `uc ]
+[; ;main.c: 184: Disable_Global_Interrupt();
+"184
+[e ( _Disable_Global_Interrupt ..  ]
+[; ;main.c: 185: do { LATCbits.LATC2 = 1; } while(0);
+"185
+[e :U 1448 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 1460 ]
+[e :U 1447 ]
+[; ;main.c: 188: enable_uart_printf();
+"188
+[e ( _enable_uart_printf ..  ]
+[; ;main.c: 189: dump_memory_map();
+"189
+[e ( _dump_memory_map ..  ]
+[; ;main.c: 190: printf("[RX-BUFFER] value from pH485_probe: \r\n"
+[; ;main.c: 191: "pH  : %u \r\n"
+[; ;main.c: 192: "TEMP: %u \r\n",
+[; ;main.c: 193: sensor_value.ph_value,
+[; ;main.c: 194: sensor_value.temp_value
+[; ;main.c: 195: );
+"195
+[e ( _printf , , (. :s 6C -> . _sensor_value 0 `i . _sensor_value 11 ]
+[; ;main.c: 196: printf("---------------------------- \r\n");
+"196
+[e ( _printf :s 7C ]
+[; ;main.c: 198: enable_tx_transmit();
+"198
+[e ( _enable_tx_transmit ..  ]
+[; ;main.c: 200: state = STATE_MEASURE;
+"200
+[e = _state . `E10545 2 ]
+[; ;main.c: 202: break;
+"202
+[e $U 1430  ]
+[; ;main.c: 203: default:
+"203
+[e :U 1449 ]
+[; ;main.c: 204: break;
+"204
+[e $U 1430  ]
 "205
 }
-[e :U 1452 ]
-[; ;main.c: 205: }
-[; ;main.c: 209: if(uart_rx_package_event){
-"209
-[e $ ! != -> _uart_rx_package_event `i -> -> -> 0 `i `Vuc `i 1462  ]
-{
-[; ;main.c: 210: uart_rx_package_event = 0;
-"210
-[e = _uart_rx_package_event -> -> 0 `i `uc ]
-[; ;main.c: 211: do { LATCbits.LATC2 = 0; } while(0);
-"211
-[e :U 1465 ]
-{
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 1464 ]
-[; ;main.c: 221: rxbuffer_index = 0;
-"221
-[e = _rxbuffer_index -> -> 0 `i `uc ]
-"224
-[v _ph `f ~T0 @X0 1 a ]
-[; ;main.c: 224: float ph = 0;
-[e = _ph -> -> 0 `i `f ]
-"225
-[v _payload `ul ~T0 @X0 1 a ]
-[; ;main.c: 225: uint32_t payload = ((uint32_t)rxbuffer[5] << 24) |
-[; ;main.c: 226: ((uint32_t)rxbuffer[6]) << 16 |
-[; ;main.c: 227: ((uint32_t)rxbuffer[3]) << 8 |
-[; ;main.c: 228: ((uint32_t)rxbuffer[4] << 0);
-"228
-[e = _payload | | | << -> *U + &U _rxbuffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 24 `i << -> *U + &U _rxbuffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 16 `i << -> *U + &U _rxbuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 8 `i << -> *U + &U _rxbuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 0 `i ]
-[; ;main.c: 229: __builtin_memcpy(&ph,&payload,sizeof(float));
-"229
-[e ( ___builtin_memcpy (3 , , -> &U _ph `*v -> &U _payload `*Cv -> # `f `ui ]
-"230
-[v _ph2 `ui ~T0 @X0 1 a ]
-[; ;main.c: 230: uint16_t ph2 = (uint16_t)(ph * 100);
-[e = _ph2 -> * _ph -> -> 100 `i `f `ui ]
-[; ;main.c: 231: printf("PH: %u\r\n", ph2);
-"231
-[e ( _printf , (. :s 9C _ph2 ]
-"233
-[v _temp `f ~T0 @X0 1 a ]
-[; ;main.c: 233: float temp = 0;
-[e = _temp -> -> 0 `i `f ]
-"234
-[v _payload_temp `ul ~T0 @X0 1 a ]
-[; ;main.c: 234: uint32_t payload_temp = ((uint32_t)rxbuffer[9] << 24) |
-[; ;main.c: 235: ((uint32_t)rxbuffer[10]) << 16 |
-[; ;main.c: 236: ((uint32_t)rxbuffer[7]) << 8 |
-[; ;main.c: 237: ((uint32_t)rxbuffer[8] << 0);
-"237
-[e = _payload_temp | | | << -> *U + &U _rxbuffer * -> -> -> 9 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 24 `i << -> *U + &U _rxbuffer * -> -> -> 10 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 16 `i << -> *U + &U _rxbuffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 8 `i << -> *U + &U _rxbuffer * -> -> -> 8 `i `ui `ux -> -> # *U &U _rxbuffer `ui `ux `ul -> 0 `i ]
-[; ;main.c: 238: __builtin_memcpy(&temp,&payload_temp,sizeof(float));
-"238
-[e ( ___builtin_memcpy (3 , , -> &U _temp `*v -> &U _payload_temp `*Cv -> # `f `ui ]
-"239
-[v _temp2 `ui ~T0 @X0 1 a ]
-[; ;main.c: 239: uint16_t temp2 = (uint16_t)(temp * 100);
-[e = _temp2 -> * _temp -> -> 100 `i `f `ui ]
-[; ;main.c: 240: printf("TEMP: %u\r\n", temp2);
-"240
-[e ( _printf , (. :s 10C _temp2 ]
-[; ;main.c: 243: (RC3PPS = 0x00);
-"243
-[e = _RC3PPS -> -> 0 `i `uc ]
-[; ;main.c: 244: (RA5PPS = 0x0F);
-"244
-[e = _RA5PPS -> -> 15 `i `uc ]
-[; ;main.c: 247: _delay((unsigned long)((10)*(1000000/4000.0)));
-"247
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 248: (RC3PPS = 0x0F);
-"248
-[e = _RC3PPS -> -> 15 `i `uc ]
-[; ;main.c: 249: (RA5PPS = 0x00);
-"249
-[e = _RA5PPS -> -> 0 `i `uc ]
-[; ;main.c: 253: GIE = 0;
-"253
-[e = _GIE -> -> 0 `i `b ]
-[; ;main.c: 254: i2c_slave_set_register(0x00, (uint8_t)(ph2 >> 8) & 0xFF);
-"254
-[e ( _i2c_slave_set_register (2 , -> -> 0 `i `uc -> & -> -> >> _ph2 -> 8 `i `uc `i -> 255 `i `uc ]
-[; ;main.c: 255: i2c_slave_set_register(0x01, (uint8_t)(ph2 >> 0) & 0xFF);
-"255
-[e ( _i2c_slave_set_register (2 , -> -> 1 `i `uc -> & -> -> >> _ph2 -> 0 `i `uc `i -> 255 `i `uc ]
-[; ;main.c: 256: i2c_slave_set_register(0x02, (uint8_t)(temp2 >> 8) & 0xFF);
-"256
-[e ( _i2c_slave_set_register (2 , -> -> 2 `i `uc -> & -> -> >> _temp2 -> 8 `i `uc `i -> 255 `i `uc ]
-[; ;main.c: 257: i2c_slave_set_register(0x03, (uint8_t)(temp2 >> 0) & 0xFF);
-"257
-[e ( _i2c_slave_set_register (2 , -> -> 3 `i `uc -> & -> -> >> _temp2 -> 0 `i `uc `i -> 255 `i `uc ]
-[; ;main.c: 258: GIE = 1;
-"258
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 260: do { LATCbits.LATC2 = 1; } while(0);
-"260
-[e :U 1468 ]
-{
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 1467 ]
-[; ;main.c: 262: (RC3PPS = 0x00);
-"262
-[e = _RC3PPS -> -> 0 `i `uc ]
-[; ;main.c: 263: (RA5PPS = 0x0F);
-"263
-[e = _RA5PPS -> -> 15 `i `uc ]
-[; ;main.c: 264: dump_memory_map();
-"264
-[e ( _dump_memory_map ..  ]
-[; ;main.c: 265: printf("[%lu] PH: %u (0.01*unit)\r\n", get_ticks(), ph2);
-"265
-[e ( _printf , , (. :s 11C ( _get_ticks ..  _ph2 ]
-[; ;main.c: 266: _delay((unsigned long)((10)*(1000000/4000.0)));
-"266
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 267: (RC3PPS = 0x0F);
-"267
-[e = _RC3PPS -> -> 15 `i `uc ]
-[; ;main.c: 268: (RA5PPS = 0x00);
-"268
-[e = _RA5PPS -> -> 0 `i `uc ]
-"270
-}
-[e :U 1462 ]
-[; ;main.c: 270: }
-[; ;main.c: 272: now = get_ticks_with_lock();
-"272
+[; ;main.c: 205: };
+[e $U 1430  ]
+"84
+[e :U 1431 ]
+[e [\ _state , $ . `E10545 2 1432
+ , $ . `E10545 4 1435
+ , $ . `E10545 3 1438
+ , $ . `E10545 7 1439
+ , $ . `E10545 8 1440
+ , $ . `E10545 5 1441
+ , $ . `E10545 6 1442
+ 1449 ]
+"205
+[e :U 1430 ]
+[; ;main.c: 208: now = get_ticks_with_lock();
+"208
 [e = _now ( _get_ticks_with_lock ..  ]
-"273
-[v F10534 `ul ~T0 @X0 1 s prev_ticks2 ]
-[i F10534
+"209
+[v F10646 `ul ~T0 @X0 1 s prev_ticks2 ]
+[i F10646
 -> -> -> 0 `i `l `ul
 ]
-[; ;main.c: 273: static uint32_t prev_ticks2 = 0;
-[; ;main.c: 274: if(calculate_diff(now, prev_ticks2) >= 2000){
-"274
-[e $ ! >= ( _calculate_diff (2 , _now F10534 -> -> -> 2000 `i `l `ul 1469  ]
+[; ;main.c: 209: static uint32_t prev_ticks2 = 0;
+[; ;main.c: 210: if(calculate_diff(now, prev_ticks2) >= 2000){
+"210
+[e $ ! >= ( _calculate_diff (2 , _now F10646 -> -> -> 2000 `i `l `ul 1450  ]
 {
-[; ;main.c: 275: prev_ticks2 = now;
-"275
-[e = F10534 _now ]
-[; ;main.c: 277: set_device_serial_number_to_i2c_slave_memorymap();
-"277
+[; ;main.c: 211: prev_ticks2 = now;
+"211
+[e = F10646 _now ]
+[; ;main.c: 212: set_device_serial_number_to_i2c_slave_memorymap();
+"212
 [e ( _set_device_serial_number_to_i2c_slave_memorymap ..  ]
-"278
+"213
 }
-[e :U 1469 ]
-"280
+[e :U 1450 ]
+[; ;main.c: 213: };
+"215
 }
-[e :U 1449 ]
-"184
-[e $U 1450  ]
-[e :U 1451 ]
-[; ;main.c: 278: }
-[; ;main.c: 280: }
-[; ;main.c: 281: }
-"281
-[e :UE 1448 ]
+[e :U 1426 ]
+"71
+[e $U 1427  ]
+[e :U 1428 ]
+[; ;main.c: 215: }
+[; ;main.c: 216: }
+"216
+[e :UE 1425 ]
 }
-[p f _printf 10781716 ]
+[p f _printf 8651776 ]
 [a 3C 48 65 48 49 56 50 48 48 48 49 0 ]
-[a 4C 48 65 48 49 56 50 48 48 48 49 0 ]
-[a 7C 48 65 48 49 56 50 48 48 48 49 0 ]
-[a 1C 37 48 50 88 32 0 ]
-[a 10C 84 69 77 80 58 32 37 117 13 10 0 ]
-[a 9C 80 72 58 32 37 117 13 10 0 ]
-[a 8C 91 37 108 117 93 32 82 101 113 117 101 115 116 13 10 0 ]
-[a 6C 115 110 58 32 37 115 13 10 0 ]
-[a 5C 80 72 32 80 114 111 98 101 32 119 105 116 104 32 82 83 52 56 53 13 10 0 ]
-[a 11C 91 37 108 117 93 32 80 72 58 32 37 117 32 40 48 46 48 49 42 117 110 105 116 41 13 10 0 ]
-[a 2C 13 10 0 ]
+[a 2C 115 110 58 32 37 115 13 10 0 ]
+[a 1C 80 72 32 80 114 111 98 101 32 119 105 116 104 32 82 83 52 56 53 13 10 0 ]
+[a 6C 91 82 88 45 66 85 70 70 69 82 93 32 118 97 108 117 101 32 102 114 111 109 32 112 72 52 56 53 95 112 114 111 98 101 58 32 13 10 112 72 32 32 58 32 37 117 32 13 10 84 69 77 80 58 32 37 117 32 13 10 0 ]
+[a 4C 91 82 88 45 66 85 70 70 69 82 93 32 65 68 67 95 118 97 108 117 101 32 102 114 111 109 32 112 72 52 56 53 95 112 114 111 98 101 58 32 13 10 112 104 32 65 68 67 95 118 97 108 117 101 95 76 105 115 116 58 32 37 117 32 13 10 112 72 32 84 111 112 95 80 111 105 110 116 32 65 68 67 58 32 32 32 32 32 37 117 32 13 10 112 72 32 66 111 116 116 111 109 95 80 111 105 110 116 32 65 68 67 58 32 32 37 117 32 13 10 0 ]
+[a 5C 91 67 97 108 105 98 114 97 116 105 111 110 93 32 45 45 45 32 13 10 45 45 89 111 117 32 104 97 118 101 32 53 32 115 101 99 111 110 100 115 32 116 111 32 112 114 101 115 115 32 116 104 101 32 99 97 108 105 98 114 97 116 105 111 110 32 98 117 116 116 111 110 45 45 32 13 10 0 ]
+[a 7C 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 32 13 10 0 ]

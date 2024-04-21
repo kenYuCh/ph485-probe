@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ph-probe-v2.X
+PROJECTNAME=ph485-probe
 
 # Active Configuration
 DEFAULTCONF=default
