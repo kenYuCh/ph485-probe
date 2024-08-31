@@ -2,7 +2,7 @@
 #define CONFIGURATION_H
 
 
-#define DEVICE_SERIAL "0A01820001"
+#define DEVICE_SERIAL "0000000000"
 
 
 #endif
