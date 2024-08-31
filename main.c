@@ -281,7 +281,7 @@ void main() {
 }
 
 
-/* Handy note
+/* ken
  * 2023-08-29:
  *      use fixed-point to replace print float output for recude flash usage.
  *      use xc8 v1.45 compiler does NOT work.
