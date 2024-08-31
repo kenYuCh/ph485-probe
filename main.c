@@ -280,21 +280,3 @@ void main() {
     }
 }
 
-
-/* ken
- * 2023-08-29:
- *      use fixed-point to replace print float output for recude flash usage.
- *      use xc8 v1.45 compiler does NOT work.
- *      use xc8 v2.40 compiler work ! WHY ?
- * 2024-02-02
- *      - copy from 2023-08-31-do-probe-v2.X
- *      - hardware: UNIPCB, hardware version v2.6
- * 2024-02-04
- *      - change UART output from RC5 to RA5.
- * 2024-02-05
- *      - fix printf() issue by leave 10ms window 
- *        when switching between RC3/RA5 pin.
- *      - modify LED behavior. 
- * 
- * 
- */
