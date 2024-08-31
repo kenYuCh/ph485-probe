@@ -117,7 +117,7 @@ void i2c_slave_interrupt() {
     SSP1CON1bits.CKP = 1;
 }
 
-// handy debug
+// debug
 void dump_memory_map(){
     dump_buffer(slaveData, sizeof(slaveData));
 }
